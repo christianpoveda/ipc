@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>development on Introducción al pensamiento computacional</title>
-    <link>https://christianpoveda.github.io/ipc/tags/development/</link>
-    <description>Recent content in development on Introducción al pensamiento computacional</description>
+    <title>golang on Introducción al pensamiento computacional</title>
+    <link>https://christianpoveda.github.io/ipc/categories/golang/</link>
+    <description>Recent content in golang on Introducción al pensamiento computacional</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>&amp;copy; Christian Poveda 2020</copyright>
     <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://christianpoveda.github.io/ipc/tags/development/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://christianpoveda.github.io/ipc/categories/golang/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

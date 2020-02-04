@@ -3,73 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://christianpoveda.github.io/ipc/post/creating-a-new-theme/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://christianpoveda.github.io/ipc/post/migrate-from-jekyll/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+    <loc>https://christianpoveda.github.io/ipc/post/syllabus/</loc>
+    <lastmod>2020-02-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://christianpoveda.github.io/ipc/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://christianpoveda.github.io/ipc/post/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://christianpoveda.github.io/ipc/about/</loc>
-    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://christianpoveda.github.io/ipc/post/goisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://christianpoveda.github.io/ipc/tags/development/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://christianpoveda.github.io/ipc/post/hugoisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://christianpoveda.github.io/ipc/tags/go/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://christianpoveda.github.io/ipc/tags/golang/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://christianpoveda.github.io/ipc/tags/hugo/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>https://christianpoveda.github.io/ipc/categories/</loc>
   </url>
   
   <url>
     <loc>https://christianpoveda.github.io/ipc/tags/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://christianpoveda.github.io/ipc/tags/templates/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://christianpoveda.github.io/ipc/tags/themes/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
 </urlset>

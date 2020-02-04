@@ -2603,6 +2603,7 @@ a.box:active {
 .subtitle.is-6,
 .subtitle.is-6 code {
   font-size: 14px;
+  margin-bottom: 25px;
 }
 
 .subtitle.tags,
@@ -6407,7 +6408,7 @@ a.panel-block:hover {
 
 .section {
   background-color: #fff;
-  padding: 40px 20px;
+  padding: 20px 10px;
 }
 
 @media screen and (min-width: 980px) {
@@ -6462,7 +6463,7 @@ html {
 .content h5:not(:first-child),
 .content h6:not(:first-child),
 article+article {
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 .content {
