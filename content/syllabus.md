@@ -18,24 +18,24 @@ programación Python.
 
 # Cronograma
 
-Semana  | Tema                      | Subtema                      | Laboratorio                         |
-------- | ------------------------- | ---------------------------- | ----------------------------------- |
-1       | Introducción              | Computación como herramienta | Resolución de problemas             |
-2       | Introducción              | Arquitectura computacional   | N/A                                 |
-3       | Estructura de un programa | ¿Qué es un programa?         | Ambiente de desarrollo y hola mundo |
-4       | Estructura de un programa | Tipos y datos                | Operaciones aritméticas             |
-5       | Estructura de un programa | Variables y asignaciones     | Manipulación de variables           |
-6       | Estructura de un programa | Funciones y abstracción      | Reutilización de código             |
-7       | Flujo de control          | Lógica proposicional         | __Primer examen__                   |
-8       | Flujo de control          | Condicionales                | Uso de condicionales                |
-9       | Flujo de control          | Recursión                    | Problemas recursivos                |
-10      | Flujo de control          | Ciclos                       | Tareas repetitivas                  |
-11      | Estructuras de datos      | Listas                       | Laboratorio de listas               |
-12      | Estructuras de datos      | Diccionarios                 | Laboratorio de diccionarios         |
-13      | Estructuras de datos      | Otras estructuras            | __Segundo examen__                  |
-14      | Entrada y salida          | Canales estándar             | Laboratorio de canales estándar     |
-15      | Entrada y salida          | Archivos y persistencia      | Laboratorio de manejo de archivos   |
-16      | Ramas de la computación   | N/A                          | N/A                                 |
+Semana  | Tema                      | Subtema                      | Laboratorio                          |
+------- | ------------------------- | ---------------------------- | ------------------------------------ |
+1       | Introducción              | Computación como herramienta | Resolución de problemas              |
+2       | Introducción              | Arquitectura computacional   | N/A                                  |
+3       | Estructura de un programa | ¿Qué es un programa?         | [Hola mundo y operaciones aritméticas](https://github.com/christianpoveda/ipc/raw/master/files/primeros_pasos.pdf) |
+4       | Estructura de un programa | [Diagramas de flujo](https://github.com/christianpoveda/ipc/raw/master/files/diagramas_de_flujo.pdf)           | Tipos y representación de datos      |
+5       | Estructura de un programa | Variables y asignaciones     | Manipulación de variables            |
+6       | Estructura de un programa | Funciones y abstracción      | Reutilización de código y contexto   |
+7       | Flujo de control          | Lógica proposicional         | __Primer examen__                    |
+8       | Flujo de control          | Condicionales                | Uso de condicionales                 |
+9       | Flujo de control          | Recursión                    | Problemas recursivos                 |
+10      | Flujo de control          | Ciclos                       | Tareas repetitivas                   |
+11      | Estructuras de datos      | Listas                       | Laboratorio de listas                |
+12      | Estructuras de datos      | Diccionarios                 | Laboratorio de diccionarios          |
+13      | Estructuras de datos      | Otras estructuras            | __Segundo examen__                   |
+14      | Entrada y salida          | Canales estándar             | Laboratorio de canales estándar      |
+15      | Entrada y salida          | Archivos y persistencia      | Laboratorio de manejo de archivos    |
+16      | Ramas de la computación   | N/A                          | N/A                                  |
 
 # Calificaciones
 
@@ -91,7 +91,7 @@ estar intelectualmente involucrado en la realización de su trabajo. En
 cualquier otro caso se procederá según el reglamento estudiantil de la
 universidad.
 
-# Referencias
+# Bibliografía
 
 - [Python for Everybody](https://books.trinket.io/pfe/) - Charles Severance.
 - [How to Think Like a Computer Scientist](http://openbookproject.net/thinkcs/python/english3e/) - Peter Wentworth et al.
