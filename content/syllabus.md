@@ -12,30 +12,45 @@ weight: 10
 El propósito de esta asignatura consiste en que el estudiante pueda representar
 de forma autónoma problemas científicos y de propósito en general, y a su vez
 sea capaz de desarrollo de algoritmos que faciliten la solución a estos
-problemas. El componente práctico del curso se realizará en el lenguaje de
-programación Python.
+problemas.
 
 
 # Cronograma
 
-Semana  | Tema                      | Subtema                      | Laboratorio                          |
-------- | ------------------------- | ---------------------------- | ------------------------------------ |
-1       | Introducción              | Computación como herramienta | Resolución de problemas              |
-2       | Introducción              | Arquitectura computacional   | N/A                                  |
-3       | Estructura de un programa | ¿Qué es un programa?         | [Hola mundo y operaciones aritméticas](https://github.com/christianpoveda/ipc/raw/master/files/primeros_pasos.pdf) |
-4       | Estructura de un programa | [Diagramas de flujo](https://github.com/christianpoveda/ipc/raw/master/files/diagramas_de_flujo.pdf)           | Tipos y representación de datos      |
-5       | Estructura de un programa | Variables y asignaciones     | Manipulación de variables            |
-6       | Estructura de un programa | Funciones y abstracción      | Reutilización de código y contexto   |
-7       | Flujo de control          | Lógica proposicional         | __Primer examen__                    |
-8       | Flujo de control          | Condicionales                | Uso de condicionales                 |
-9       | Flujo de control          | Recursión                    | Problemas recursivos                 |
-10      | Flujo de control          | Ciclos                       | Tareas repetitivas                   |
-11      | Estructuras de datos      | Listas                       | Laboratorio de listas                |
-12      | Estructuras de datos      | Diccionarios                 | Laboratorio de diccionarios          |
-13      | Estructuras de datos      | Otras estructuras            | __Segundo examen__                   |
-14      | Entrada y salida          | Canales estándar             | Laboratorio de canales estándar      |
-15      | Entrada y salida          | Archivos y persistencia      | Laboratorio de manejo de archivos    |
-16      | Ramas de la computación   | N/A                          | N/A                                  |
+Semana  | Tema                                       | Taller   |
+------- |------------------------------------------- | -------- |
+3       | [Introducción a los algoritmos][1]         |          |
+4       | [Diagramas de flujo][2] y [complejidad][3] | Taller 1 |
+4       | Flujo de control                           |          |
+5       | Memoria y estructuras lineales             |          |
+5       | Funciones, contexto y tipado               |          |
+5       | Recursión y llamadas a funciones           |          |
+6       | Ordenamiento de secuencias                 |          |
+6       | Estructuras de datos y referencias         |          |
+7       | Repaso                                     |          |
+7       | __Primer examen__                          |          |
+8       | Funciones de Hash                          |          |
+8       | Grafos y árboles                           |          |
+9       |                                            |          |
+9       |                                            |          |
+10      |                                            |          |
+10      |                                            |          |
+11      |                                            |          |
+11      |                                            |          |
+12      |                                            |          |
+12      |                                            |          |
+13      |                                            |          |
+13      | __Segundo examen__                         |          |
+14      |                                            |          |
+14      |                                            |          |
+15      |                                            |          |
+15      |                                            |          |
+16      |                                            |          |
+16      |                                            |          |
+
+[1]: https://github.com/christianpoveda/ipc/raw/master/files/primeros_pasos.pdf
+[2]: https://github.com/christianpoveda/ipc/raw/master/files/diagramas_de_flujo.pdf
+[3]: https://github.com/christianpoveda/ipc/raw/master/files/complejidad.pdf
 
 # Calificaciones
 
@@ -93,7 +108,7 @@ universidad.
 
 # Bibliografía
 
+- [Grokking Algorithms](https://www.manning.com/books/grokking-algorithms) - Aditya Y. Bhargava.
 - [Python for Everybody](https://books.trinket.io/pfe/) - Charles Severance.
 - [How to Think Like a Computer Scientist](http://openbookproject.net/thinkcs/python/english3e/) - Peter Wentworth et al.
 - [The Python Workbook](https://www.springer.com/gp/book/9783319385617) - Ben Stephenson.
-- [Grokking Algorithms](https://www.manning.com/books/grokking-algorithms) - Aditya Y. Bhargava.
