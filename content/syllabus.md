@@ -20,7 +20,7 @@ problemas.
 Semana  | Tema                                       | Taller   |
 ------- |------------------------------------------- | -------- |
 3       | [Introducción a los algoritmos][1]         |          |
-4       | [Diagramas de flujo][2] y [complejidad][3] | Taller 1 |
+4       | [Diagramas de flujo][2] y [complejidad][3] | [Taller 1](../hw/taller01/) |
 4       | Flujo de control                           |          |
 5       | Memoria y estructuras lineales             |          |
 5       | Funciones, contexto y tipado               |          |

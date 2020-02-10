@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>Taller 1 | Introducción al pensamiento computacional</title>
+
+
+
+<link rel="stylesheet" href="/ipc/css/style.css"/><link rel='stylesheet' href='https://christianpoveda.github.io/ipc/css/custom.css'><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="canonical" href="https://christianpoveda.github.io/ipc/hw/taller01/">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<section class="section">
+  <div class="container">
+    <nav id="nav-main" class="nav">
+      <div id="nav-name" class="nav-left">
+        <a id="nav-anchor" class="nav-item" href="https://christianpoveda.github.io/ipc/">
+          <h1 id="nav-heading" class="title is-4">Introducción al pensamiento computacional</h1>
+        </a>
+      </div>
+      
+      
+      
+      
+      
+      
+    </nav>
+
+    
+    
+    
+    
+    
+
+  </div>
+  <script src="/js/navicon-shift.js"></script>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="subtitle tags is-6 is-pulled-right">
+      
+    </div>
+    <h2 class="subtitle is-6">February 10, 2020</h2>
+    <h1 class="title">Taller 1</h1>
+    
+    <div class="content">
+      <h1 id="instrucciones">Instrucciones</h1>
+<ul>
+<li>Este taller puede ser realizado de forma individual o de a parejas.</li>
+<li>Debe ser entregado de forma escrita el 2020-02-17 al comienzo de la clase.</li>
+</ul>
+<h1 id="temática">Temática</h1>
+<p>En su nuevo trabajo como ingeniero de investigación y desarrollo del <a href="https://es.wikipedia.org/wiki/Organismo_Internacional_de_Energ%C3%ADa_At%C3%B3mica">Organismo Internacional de Energía Atómica (OEIA)</a> se le ha designado investigar un método mas eficiente para almacenar deshechos radiactivos. Gracias al arduo trabajo de sus colegas, el OEIA ha creado un robot controlado de manera remota para transportar los deshechos radiactivos, evitando afectar la salud de los empleados que trabajan en la industria nuclear. Por protocolo, los deshechos radiactivos se encuentran almacenados en barriles, los cuales están puestos en línea recta uno detrás de otro.</p>
+<p>Este robot es un prototipo y solo es capaz de realizar algunas instrucciones básicas:</p>
+<ul>
+<li>Almacenar la posición del barril que tiene al frente en su memoria.</li>
+<li>Medir la <a href="https://es.wikipedia.org/wiki/Sievert">dosis de radiación ionizante</a> producida por el barril que tiene al frente y guardar el valor en su memoria.</li>
+<li>Moverse a una posición almacenada en su memoria.</li>
+<li>Incrementar o disminuir alguno de los valores en memoria por <code>1</code>.</li>
+<li>Decidir si un valor en memoria es mayor o igual a otro.</li>
+<li>Intercambiar dos barriles si tiene almacenadas sus posiciones.</li>
+</ul>
+<p>Su trabajo consiste en escribir algoritmos para que este prototipo pueda optimizar el orden de subida de los barriles a un camión de carga, el cual los transportará a su lugar de deposito final.</p>
+<p>A continuación tiene dos problemas que debe resolver. Para ambos problemas:</p>
+<ol>
+<li>Describa algoritmo de su solución usando diagramas de flujo.</li>
+<li>Calcule la complejidad temporal del algoritmo teniendo en cuenta sólo el número de comparaciones entre dos valores como función del número de barriles.</li>
+</ol>
+<p>Como convención, se dirá que la fila de barriles se encuentra de izquierda a derecha. En ambos problemas, el robot comienza justo al lado del barril del extremo izquierdo y el número de barriles se representa con la variable <code>n</code>. Asuma además que cada barril ocupa <code>1</code> unidad de distancia.</p>
+<h1 id="problema-1-búsqueda-del-mínimo">Problema 1: Búsqueda del mínimo</h1>
+<p>La primera tarea a la que debe enfrentarse es encontrar la posición del barril con la menor dosis de radiación. Para así darle menor prioridad a la hora de transportarlo.</p>
+<h1 id="problema-2-organizando-los-barriles">Problema 2: Organizando los barriles</h1>
+<p>El camión que transporta los barriles no puede llevar todos los barriles al tiempo, por lo que el robot debe organizar los barriles en una linea recta de acuerdo a la dosis de radiación de forma ascendente (El mayor barril a la derecha, y el menor barril a la izquierda).</p>
+<p>Para este problema, además de las instrucciones básicas, puede utilizar su algoritmo anterior para encontrar el máximo entre el grupo de barriles que el robot tiene a su derecha como si fuese una instrucción más.</p>
+
+      
+    </div>
+    
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p></p>
+    
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/ribice/kiss">Kiss</a>.</p>
+    
+  </div>
+</section>
+
+
+
+</body>
+</html>
+
