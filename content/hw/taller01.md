@@ -27,7 +27,7 @@ Su trabajo consiste en escribir algoritmos para que este prototipo pueda optimiz
 
 A continuación tiene dos problemas que debe resolver. Para ambos problemas:
 
-1. Describa algoritmo de su solución usando diagramas de flujo.
+1. Describa el algoritmo de su solución usando diagramas de flujo.
 2. Calcule la complejidad temporal del algoritmo teniendo en cuenta sólo el número de comparaciones entre dos valores como función del número de barriles.
 
 Como convención, se dirá que la fila de barriles se encuentra de izquierda a derecha. En ambos problemas, el robot comienza justo al lado del barril del extremo izquierdo y el número de barriles se representa con la variable `n`. Asuma además que cada barril ocupa `1` unidad de distancia.
@@ -40,4 +40,4 @@ La primera tarea a la que debe enfrentarse es encontrar la posición del barril 
 
 El camión que transporta los barriles no puede llevar todos los barriles al tiempo, por lo que el robot debe organizar los barriles en una linea recta de acuerdo a la dosis de radiación de forma ascendente (El mayor barril a la derecha, y el menor barril a la izquierda).
 
-Para este problema, además de las instrucciones básicas, puede utilizar su algoritmo anterior para encontrar el máximo entre el grupo de barriles que el robot tiene a su derecha como si fuese una instrucción más.
+Para este problema, además de las instrucciones básicas, puede utilizar su algoritmo anterior para encontrar el mínimo entre el grupo de barriles que el robot tiene a su derecha como si fuese una instrucción más.
