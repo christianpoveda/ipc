@@ -21,7 +21,7 @@ Semana  | Tema                                       | Lecturas                 
 ------- |------------------------------------------- | -------------------------------- | --------------------------- |
 3       | [Introducción a los algoritmos][1]         | `[grok]` cap. 1, `[py4e]` cap. 2 |                             |
 4       | [Diagramas de flujo][2] y [complejidad][3] | `[grok]` cap. 1                  | [Taller 1](../hw/taller01/) |
-4       | Flujo de control                           | `[py4e]` cap. 3 y 5              |                             |
+4       | [Flujo de control][4]                      | `[py4e]` cap. 3 y 5              |                             |
 5       | Memoria y estructuras lineales             | `[grok]` cap. 2, `[py4e]` cap. 8 |                             |
 5       | Funciones, contexto y tipado               | `[py4e]` cap. 4                  |                             |
 5       | Recursión y llamadas a funciones           | `[grok]` cap. 3                  |                             |
@@ -51,6 +51,7 @@ Semana  | Tema                                       | Lecturas                 
 [1]: https://github.com/christianpoveda/ipc/raw/master/files/primeros_pasos.pdf
 [2]: https://github.com/christianpoveda/ipc/raw/master/files/diagramas_de_flujo.pdf
 [3]: https://github.com/christianpoveda/ipc/raw/master/files/complejidad.pdf
+[4]: https://github.com/christianpoveda/ipc/raw/master/files/flujo_de_control.pdf
 
 # Calificaciones
 
