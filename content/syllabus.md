@@ -48,10 +48,10 @@ Semana  | Tema                                       | Lecturas                 
 16      |                                            |                                  |                             |
 16      |                                            |                                  |                             |
 
-[1]: https://github.com/christianpoveda/ipc/raw/master/files/primeros_pasos.pdf
-[2]: https://github.com/christianpoveda/ipc/raw/master/files/diagramas_de_flujo.pdf
-[3]: https://github.com/christianpoveda/ipc/raw/master/files/complejidad.pdf
-[4]: https://github.com/christianpoveda/ipc/raw/master/files/flujo_de_control.pdf
+[1]: ../slides/primeros_pasos.pdf
+[2]: ../slides/diagramas_de_flujo.pdf
+[3]: ../slides/complejidad.pdf
+[4]: ../slides/flujo_de_control.pdf
 
 # Calificaciones
 
