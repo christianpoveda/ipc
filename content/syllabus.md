@@ -17,20 +17,20 @@ problemas.
 
 # Cronograma
 
-Semana  | Tema                                       | Taller   |
-------- |------------------------------------------- | -------- |
-3       | [Introducción a los algoritmos][1]         |          |
-4       | [Diagramas de flujo][2] y [complejidad][3] | [Taller 1](../hw/taller01/) |
-4       | Flujo de control                           |          |
-5       | Memoria y estructuras lineales             |          |
-5       | Funciones, contexto y tipado               |          |
-5       | Recursión y llamadas a funciones           |          |
-6       | Ordenamiento de secuencias                 |          |
-6       | Estructuras de datos y referencias         |          |
+Semana  | Tema                                       | Taller   | Lecturas |
+------- |------------------------------------------- | -------- | -------- |
+3       | [Introducción a los algoritmos][1]         |          | `[grok]` cap. 1, `[py4e]` cap. 2 |
+4       | [Diagramas de flujo][2] y [complejidad][3] | [Taller 1](../hw/taller01/) | `[grok]` cap. 1 |
+4       | Flujo de control                           |          | `[py4e]` cap. 3 y 5 |
+5       | Memoria y estructuras lineales             |          | `[grok]` cap. 2, `[py4e]` cap. 8|
+5       | Funciones, contexto y tipado               |          | `[py4e]` cap. 4 |
+5       | Recursión y llamadas a funciones           |          | `[grok]` cap. 3 |
+6       | Ordenamiento de secuencias                 |          | `[grok]` cap. 4 |
+6       | Estructuras de datos y referencias         |          | `[py4e]` cap. 14 |
 7       | Repaso                                     |          |
 7       | __Primer examen__                          |          |
-8       | Funciones de Hash                          |          |
-8       | Grafos y árboles                           |          |
+8       | Funciones de Hash                          |          | `[grok]` cap. 5 |
+8       | Grafos y árboles                           |          | `[grok]` cap. 6 |
 9       |                                            |          |
 9       |                                            |          |
 10      |                                            |          |
@@ -108,7 +108,7 @@ universidad.
 
 # Bibliografía
 
-- [Grokking Algorithms](https://www.manning.com/books/grokking-algorithms) - Aditya Y. Bhargava.
-- [Python for Everybody](https://books.trinket.io/pfe/) - Charles Severance.
-- [How to Think Like a Computer Scientist](http://openbookproject.net/thinkcs/python/english3e/) - Peter Wentworth et al.
-- [The Python Workbook](https://www.springer.com/gp/book/9783319385617) - Ben Stephenson.
+- `[grok]` [Grokking Algorithms](https://www.manning.com/books/grokking-algorithms) - Aditya Y. Bhargava.
+- `[py4e]` [Python for Everybody](https://books.trinket.io/pfe/) - Charles Severance.
+- `[tlcs]` [How to Think Like a Computer Scientist](http://openbookproject.net/thinkcs/python/english3e/) - Peter Wentworth et al.
+- `[work]` [The Python Workbook](https://www.springer.com/gp/book/9783319385617) - Ben Stephenson.
