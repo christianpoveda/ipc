@@ -10,9 +10,8 @@ weight: 10
 # Descripción
 
 El propósito de esta asignatura consiste en que el estudiante pueda representar
-de forma autónoma problemas científicos y de propósito en general, y a su vez
-sea capaz de desarrollo de algoritmos que faciliten la solución a estos
-problemas.
+de forma autónoma problemas científicos y de propósito general, y a su vez sea
+capaz de desarrollar algoritmos que faciliten la solución a estos problemas.
 
 
 # Cronograma
@@ -72,21 +71,38 @@ proporcionalmente entre los tres cortes:
 En adición a lo establecido al reglamento estudiantil, se tienen las siguientes
 políticas:
 
-## Aproximaciones de calificaciones
+## Aproximación de calificaciones
 
-Todas las calificaciones intermedias se aproximan al múltiplo de `0.1` mas
-cercano. Las calificaciones de cada corte son aproximadas automáticamente por
-el sistema de notas de la universidad.
+Todas las calificaciones intermedias (exámenes, quices y talleres) se
+aproximan al múltiplo de `0.1` más cercano (donde `0.05` se aproxima a `0.1` y
+no a `0.0`). Las calificaciones de cada corte son aproximadas automáticamente
+por el sistema de notas de la universidad y no
+se realizarán aproximaciones adicionales.
 
 ## Medio de entrega
 
-Por definir.
+Las soluciones a los talleres deben ser enviados al correo
+`christian.poveda+ipc_tallerXX@usa.edu.co`, donde `XX` corresponde al número
+del taller que se muestra en el cronograma. En caso contrario, el estudiante
+acepta la posibilidad de que su solución no sea calificada.
+
+La fecha y hora de entrega estarán especificadas en el enunciado de cada
+taller. Si la hora y fecha a las que se recibe el correo es posterior a la hora
+y fecha máximas de entrega, la solución no será calificada a menos que el
+estudiante haga uso de sus días tarde (ver siguiente sección).
+
+El contenido de la entrega debe entregarse como archivos adjuntos al correo. Es
+__obligatorio__ entregar la solución a cada taller en formato `pdf`. Si el
+documento incluye fotos de diagramas o texto estas deben ser legibles y claras.
+Si parte de la entrega corresponde a código en Python, este debe adjuntarse en
+un archivo separado en formato `py`. En caso contrario, el estudiante acepta la
+posibilidad de que su solución no sea calificada.
 
 ## Días tarde
 
-Cada estudiante tiene derecho a 4 días tarde para entrega de tareas. Estos
-pueden ser utilizados para entregar tareas hasta 24 horas tarde sin ningún tipo
-de penalización. El estudiante solo puede hacer uso de un día tarde por tarea.
+Cada estudiante tiene derecho a 4 días tarde para entrega de talleres. Estos
+pueden ser utilizados para entregar talleres hasta 24 horas tarde sin ningún tipo
+de penalización. El estudiante solo puede hacer uso de un día tarde por taller.
 Se recomienda no usarlos inmediatamente, trate de reservarlos para eventos
 imprevistos.
 
@@ -95,6 +111,9 @@ ningún tipo de extensión mas allá de lo que permita la normativa de la
 universidad. Se recomienda entregar los trabajos antes de la hora de entrega
 aun así se encuentren incompletos, en el caso contrario no recibirá ninguna
 calificación sobre su trabajo.
+
+Al utilizar un "día tarde" el estudiante debe indicar su uso de forma
+explícita en el cuerpo del correo de la entrega.
 
 ## Trabajo colaborativo
 
