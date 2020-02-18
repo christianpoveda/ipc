@@ -6,10 +6,19 @@
     <description>Recent content in Hws on Introducción al pensamiento computacional</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://christianpoveda.github.io/ipc/hw/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Taller 2</title>
+      <link>https://christianpoveda.github.io/ipc/hw/taller02/</link>
+      <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://christianpoveda.github.io/ipc/hw/taller02/</guid>
+      <description>Funciones y abstracción</description>
+    </item>
     
     <item>
       <title>Taller 1</title>

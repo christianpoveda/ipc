@@ -22,7 +22,7 @@ Semana  | Tema                                       | Lecturas                 
 4       | [Diagramas de flujo][2] y [complejidad][3] | `[grok]` cap. 1                  | [Taller 1](../hw/taller01/) |
 4       | [Flujo de control][4]                      | `[py4e]` cap. 3 y 5, [draw with turtle](https://opentechschool.github.io/python-beginners/en/simple_drawing.html) |                             |
 5       | Memoria y estructuras lineales             | `[grok]` cap. 2, `[py4e]` cap. 8 |                             |
-5       | Funciones, contexto y tipado               | `[py4e]` cap. 4                  |                             |
+5       | Funciones y abstracción                    | `[py4e]` cap. 4, [código](https://github.com/christianpoveda/ipc/tree/master/code/grid) | [Taller 2](../hw/taller02/)                             |
 6       | Recursión y llamadas a funciones           | `[grok]` cap. 3                  |                             |
 6       | Ordenamiento de secuencias                 | `[grok]` cap. 4                  |                             |
 7       | Repaso                                     |                                  |                             |
@@ -57,7 +57,7 @@ Se realizarán tres exámenes con los siguientes porcentajes:
 
 - Primer examen (4 de marzo): 15%
 - Segundo examen (11 de abril): 15%
-- Examen final (fecha por definir): 20%
+- Examen final (20 de mayo): 20%
 
 El porcentaje restante corresponde a talleres y quices, el cual se repartirá
 proporcionalmente entre los tres cortes:
@@ -82,7 +82,7 @@ se realizarán aproximaciones adicionales.
 ## Medio de entrega
 
 Las soluciones a los talleres deben ser enviados al correo
-`christian.poveda+ipc_tallerXX@usa.edu.co`, donde `XX` corresponde al número
+`christian.poveda+ipc_tallerXX@correo.usa.edu.co`, donde `XX` corresponde al número
 del taller que se muestra en el cronograma. En caso contrario, el estudiante
 acepta la posibilidad de que su solución no sea calificada.
 
