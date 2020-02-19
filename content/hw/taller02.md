@@ -28,7 +28,9 @@ def pintar_cuadro(base):
   while lados < 4:
     turtle.forward(base)
     turtle.left(90)
-    lados += 1
+    lados = lados + 1
 
 pintar_cuadro(100)
 ```
+
+Debe utilizar los conceptos vistos en clase acerca de ciclos y funciones.
