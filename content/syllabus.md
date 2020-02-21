@@ -21,16 +21,16 @@ Semana  | Tema                                       | Lecturas                 
 3       | [Introducción a los algoritmos][1]         | `[grok]` cap. 1, `[py4e]` cap. 2 |                             |
 4       | [Diagramas de flujo][2] y [complejidad][3] | `[grok]` cap. 1                  | [Taller 1](../hw/taller01/) |
 4       | [Flujo de control][4]                      | `[py4e]` cap. 3 y 5, [draw with turtle](https://opentechschool.github.io/python-beginners/en/simple_drawing.html) |                             |
-5       | Memoria y estructuras lineales             | `[grok]` cap. 2, `[py4e]` cap. 8 |                             |
+5       | Memoria y estructuras lineales             | `[grok]` cap. 2                  |                             |
 5       | Funciones y abstracción                    | `[py4e]` cap. 4, [código](https://github.com/christianpoveda/ipc/tree/master/code/grid) | [Taller 2](../hw/taller02/)                             |
+6       | Manipulación de listas e iteradores        | `[py4e]` cap. 8                  |                             |
 6       | Recursión y llamadas a funciones           | `[grok]` cap. 3                  |                             |
-6       | Ordenamiento de secuencias                 | `[grok]` cap. 4                  |                             |
 7       | Repaso                                     |                                  |                             |
 7       | __Primer examen__                          |                                  |                             |
+8       | Ordenamiento de secuencias                 | `[grok]` cap. 4                  |                             |
 8       | Estructuras de datos y referencias         | `[py4e]` cap. 14                 |                             |
-8       | Funciones de Hash                          | `[grok]` cap. 5                  |                             |
+9       | Funciones de Hash                          | `[grok]` cap. 5                  |                             |
 9       | Grafos y árboles                           | `[grok]` cap. 6                  |                             |
-9       |                                            |                                  |                             |
 10      |                                            |                                  |                             |
 10      |                                            |                                  |                             |
 11      |                                            |                                  |                             |
