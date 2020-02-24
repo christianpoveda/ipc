@@ -39,7 +39,7 @@ Semana  | Tema                                       | Lecturas                 
 Se realizarán tres exámenes con los siguientes porcentajes:
 
 - Primer examen (4 de marzo): 15%
-- Segundo examen (11 de abril): 15%
+- Segundo examen (15 de abril): 15%
 - Examen final (20 de mayo): 20%
 
 El porcentaje restante corresponde a talleres y quices, el cual se repartirá
