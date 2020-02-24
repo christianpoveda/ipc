@@ -53,21 +53,14 @@
     <h1 class="title">Taller 1</h1>
     
     <div class="content">
-      
-
-<h1 id="instrucciones">Instrucciones</h1>
-
+      <h1 id="instrucciones">Instrucciones</h1>
 <ul>
 <li>Este taller puede ser realizado de forma individual o de a parejas.</li>
 <li>Debe ser entregado de forma escrita el 2020-02-17 al comienzo de la clase.</li>
 </ul>
-
 <h1 id="temática">Temática</h1>
-
 <p>En su nuevo trabajo como ingeniero de investigación y desarrollo del <a href="https://es.wikipedia.org/wiki/Organismo_Internacional_de_Energ%C3%ADa_At%C3%B3mica">Organismo Internacional de Energía Atómica (OEIA)</a> se le ha designado investigar un método mas eficiente para almacenar deshechos radiactivos. Gracias al arduo trabajo de sus colegas, el OEIA ha creado un robot controlado de manera remota para transportar los deshechos radiactivos, evitando afectar la salud de los empleados que trabajan en la industria nuclear. Por protocolo, los deshechos radiactivos se encuentran almacenados en barriles, los cuales están puestos en línea recta uno detrás de otro.</p>
-
 <p>Este robot es un prototipo y solo es capaz de realizar algunas instrucciones básicas:</p>
-
 <ul>
 <li>Almacenar la posición del barril que tiene al frente en su memoria.</li>
 <li>Medir la <a href="https://es.wikipedia.org/wiki/Sievert">dosis de radiación ionizante</a> producida por el barril que tiene al frente y guardar el valor en su memoria.</li>
@@ -76,26 +69,17 @@
 <li>Decidir si un valor en memoria es mayor o igual a otro.</li>
 <li>Intercambiar dos barriles si tiene almacenadas sus posiciones.</li>
 </ul>
-
 <p>Su trabajo consiste en escribir algoritmos para que este prototipo pueda optimizar el orden de subida de los barriles a un camión de carga, el cual los transportará a su lugar de deposito final.</p>
-
 <p>A continuación tiene dos problemas que debe resolver. Para ambos problemas:</p>
-
 <ol>
 <li>Describa el algoritmo de su solución usando diagramas de flujo.</li>
 <li>Calcule la complejidad temporal del algoritmo teniendo en cuenta sólo el número de comparaciones entre dos valores como función del número de barriles.</li>
 </ol>
-
 <p>Como convención, se dirá que la fila de barriles se encuentra de izquierda a derecha. En ambos problemas, el robot comienza justo al lado del barril del extremo izquierdo y el número de barriles se representa con la variable <code>n</code>. Asuma además que cada barril ocupa <code>1</code> unidad de distancia.</p>
-
 <h1 id="problema-1-búsqueda-del-mínimo">Problema 1: Búsqueda del mínimo</h1>
-
 <p>La primera tarea a la que debe enfrentarse es encontrar la posición del barril con la menor dosis de radiación. Para así darle menor prioridad a la hora de transportarlo.</p>
-
 <h1 id="problema-2-organizando-los-barriles">Problema 2: Organizando los barriles</h1>
-
 <p>El camión que transporta los barriles no puede llevar todos los barriles al tiempo, por lo que el robot debe organizar los barriles en una linea recta de acuerdo a la dosis de radiación de forma ascendente (El mayor barril a la derecha, y el menor barril a la izquierda).</p>
-
 <p>Para este problema, además de las instrucciones básicas, puede utilizar su algoritmo anterior para encontrar el mínimo entre el grupo de barriles que el robot tiene a su derecha como si fuese una instrucción más.</p>
 
       

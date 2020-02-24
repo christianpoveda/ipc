@@ -53,10 +53,7 @@
     <h1 class="title">Taller 2</h1>
     
     <div class="content">
-      
-
-<h1 id="instrucciones">Instrucciones</h1>
-
+      <h1 id="instrucciones">Instrucciones</h1>
 <ul>
 <li>Este taller puede ser realizado de forma individual o de a parejas.</li>
 <li>Debe ser entregado al correo electrónico
@@ -64,26 +61,20 @@
 a mas tardar el 2020-02-24 al comienzo de la clase, de acuerdo a lo
 establecido en el syllabus respecto al método de entrega.</li>
 </ul>
-
 <h1 id="enunciado">Enunciado</h1>
-
 <p>Escriba una función <code>pintar_cuadricula(n, base)</code> la cual dibuja una cuadrícula de <code>nxn</code> cuadrados, cuya base total mide <code>base</code>.</p>
-
 <p>Para esto debe basarse en la función <code>pintar_cuadro(base)</code> capaz de dibujar un cuadrado cuya base mide <code>base</code>, la cual se encuentra en el bloque de código a continuación:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> turtle
 
-<pre><code class="language-python">import turtle
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pintar_cuadro</span>(base):
+  lados <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+  <span style="color:#66d9ef">while</span> lados <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>:
+    turtle<span style="color:#f92672">.</span>forward(base)
+    turtle<span style="color:#f92672">.</span>left(<span style="color:#ae81ff">90</span>)
+    lados <span style="color:#f92672">=</span> lados <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
 
-def pintar_cuadro(base):
-  lados = 0
-  while lados &lt; 4:
-    turtle.forward(base)
-    turtle.left(90)
-    lados = lados + 1
-
-pintar_cuadro(100)
-</code></pre>
-
-<p>Debe utilizar los conceptos vistos en clase acerca de ciclos y funciones.</p>
+pintar_cuadro(<span style="color:#ae81ff">100</span>)
+</code></pre></div><p>Debe utilizar los conceptos vistos en clase acerca de ciclos y funciones.</p>
 
       
     </div>
