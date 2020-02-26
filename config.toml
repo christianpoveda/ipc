@@ -62,3 +62,6 @@ codeCopy = true # Add copy button above code blocks
 
 # [blackfriday]
 # hrefTargetBlank = true
+[markup]
+  [markup.highlight]
+    style = "dracula"
