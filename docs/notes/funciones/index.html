@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>Funciones y abstracción | Introducción al pensamiento computacional</title>
+
+
+
+<link rel="stylesheet" href="/ipc/css/style.css"/><link rel='stylesheet' href='https://christianpoveda.github.io/ipc/css/custom.css'><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="canonical" href="https://christianpoveda.github.io/ipc/notes/funciones/">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<section class="section">
+  <div class="container">
+    <nav id="nav-main" class="nav">
+      <div id="nav-name" class="nav-left">
+        <a id="nav-anchor" class="nav-item" href="https://christianpoveda.github.io/ipc/">
+          <h1 id="nav-heading" class="title is-4">Introducción al pensamiento computacional</h1>
+        </a>
+      </div>
+      
+      
+      
+      
+      
+      
+    </nav>
+
+    
+    
+    
+    
+    
+
+  </div>
+  <script src="/js/navicon-shift.js"></script>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="subtitle tags is-6 is-pulled-right">
+      
+    </div>
+    <h2 class="subtitle is-6">February 19, 2020</h2>
+    <h1 class="title">Funciones y abstracción</h1>
+    
+    <div class="content">
+      <p>En las clases anteriores hemos aprendido cómo hacer tareas repetitivas usando
+ciclos. Para ver esto en acción, haremos un programa usando <code>turtle</code> que pinte
+una cuadricula de <code>4x4</code>, siguiendo el algoritmo que habíamos hecho en la clase
+anterior: Pintar primero <code>5</code> líneas horizontales y luego <code>5</code> líneas verticales.</p>
+<p>Adicionalmente, tampoco tenemos claro que tan grande debe ser nuestra
+cuadrícula, ¿Debe ocupar toda la pantalla?. Mientras tanto haremos que nuestra
+cuadricula mida <code>100x100</code> unidades de distancia.</p>
+<p>Primero pintaremos una linea horizontal que mide <code>100</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> turtle
+
+turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">100</span>)
+</code></pre></div><p>Ahora hagamos que nuestra tortuga vuelva a su posición inicial:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> turtle
+
+<span style="color:#75715e"># Pintar una linea y volver</span>
+turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">100</span>)
+turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">180</span>)
+turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">100</span>)
+</code></pre></div><p>Para pintar la siguiente linea, necesitamos que nuestra tortuga se mueva 25
+unidades de distancia hacia arriba, pero sin usar el lápiz (para evitar
+confundirnos):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> turtle
+
+<span style="color:#75715e"># Pintar una linea y volver</span>
+turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">100</span>)
+turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">180</span>)
+turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">100</span>)
+
+<span style="color:#75715e"># Moverse hacia arriba</span>
+turtle<span style="color:#f92672">.</span>penup()
+turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">25</span>)
+turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+turtle<span style="color:#f92672">.</span>pendown()
+</code></pre></div><p>Además nos hemos encargado de que la tortuga gire hacia la derecha para que
+pueda pintar la siguiente linea en la posición correcta.</p>
+<p>Ahora tenemos que pintar 4 líneas mas, ingenuamente pensaríamos que la mejor manera sería copiando y pegando el código:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> turtle
+
+<span style="color:#75715e"># Pintar una linea y volver</span>
+turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">100</span>)
+turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">180</span>)
+turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">100</span>)
+
+<span style="color:#75715e"># Moverse hacia arriba</span>
+turtle<span style="color:#f92672">.</span>penup()
+turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">25</span>)
+turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+turtle<span style="color:#f92672">.</span>pendown()
+
+<span style="color:#75715e"># Pintar una linea y volver</span>
+turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">100</span>)
+turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">180</span>)
+turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">100</span>)
+
+<span style="color:#75715e"># Moverse hacia arriba</span>
+turtle<span style="color:#f92672">.</span>penup()
+turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">25</span>)
+turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+turtle<span style="color:#f92672">.</span>pendown()
+
+<span style="color:#75715e"># Pintar una linea y volver</span>
+turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">100</span>)
+turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">180</span>)
+turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">100</span>)
+
+<span style="color:#75715e"># Moverse hacia arriba</span>
+turtle<span style="color:#f92672">.</span>penup()
+turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">25</span>)
+turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+turtle<span style="color:#f92672">.</span>pendown()
+
+<span style="color:#75715e"># Pintar una linea y volver</span>
+turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">100</span>)
+turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">180</span>)
+turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">100</span>)
+
+<span style="color:#75715e"># Moverse hacia arriba</span>
+turtle<span style="color:#f92672">.</span>penup()
+turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">25</span>)
+turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+turtle<span style="color:#f92672">.</span>pendown()
+
+<span style="color:#75715e"># Pintar una linea y volver</span>
+turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">100</span>)
+turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">180</span>)
+turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">100</span>)
+</code></pre></div><p>Nótese que no decidimos movernos hacia arriba luego de pintar la quinta línea,
+dado que no pretendemos pintar más lineas hacia arriba.</p>
+<p>Pero este código es demasiado largo ¡y aún nos falta pintar las líneas
+verticales!. Además, si quisiéramos cambiar la longitud de las líneas,
+tendríamos que reemplazar los valores <code>100</code> y <code>25</code> en todas partes.</p>
+<p>Afortunadamente podemos hacer uso de un ciclo para evitar repetir una y otra
+vez las mismas instrucciones. Dado que queremos pintar y movernos hacia arriba
+4 veces (la quinta linea es pintada por aparte), necesitamos llevar cuenta de
+esto usando una variable, la cual llamaremos <code>lineas</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> turtle
+
+lineas <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+<span style="color:#66d9ef">while</span> lineas <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>:
+    <span style="color:#75715e"># Pintar una linea y volver</span>
+    turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">100</span>)
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">180</span>)
+    turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">100</span>)
+
+    <span style="color:#75715e"># Moverse hacia arriba</span>
+    turtle<span style="color:#f92672">.</span>penup()
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+    turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">25</span>)
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+    turtle<span style="color:#f92672">.</span>pendown()
+
+    <span style="color:#75715e"># Contar una linea más</span>
+    lineas <span style="color:#f92672">=</span> lineas <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+
+<span style="color:#75715e"># Pintar una linea y volver</span>
+turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">100</span>)
+turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">180</span>)
+turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">100</span>)
+</code></pre></div><p>Esto está mucho mejor, hemos evitado escribir muchas instrucciones repetidas. Sin embargo, para pintar las lineas horizontales necesitaríamos duplicar de nuevo este código.</p>
+<p>Para evitar este problema utilizaremos funciones. En pocas palabras, una función es un conjunto de instrucciones cuyo propósito es realizar una actividad específica.</p>
+<p>Para definir una función basta con usar la palabra clave <code>def</code>, por ejemplo si queremos definir una función que se encargue de pintar una linea, podemos escribir:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> turtle
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pintar_linea</span>():
+    <span style="color:#75715e"># Pintar una linea y volver</span>
+    turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">100</span>)
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">180</span>)
+    turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">100</span>)
+
+lineas <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+<span style="color:#66d9ef">while</span> lineas <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>:
+    pintar_linea()
+
+    <span style="color:#75715e"># Moverse hacia arriba</span>
+    turtle<span style="color:#f92672">.</span>penup()
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+    turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">25</span>)
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+    turtle<span style="color:#f92672">.</span>pendown()
+
+    <span style="color:#75715e"># Contar una linea más</span>
+    lineas <span style="color:#f92672">=</span> lineas <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+
+pintar_linea()
+</code></pre></div><p>Ahora cada vez que escribamos <code>pintar_linea()</code>, Python correrá el código que se encuentra dentro de la definición de la función. Es importante que los nombres de nuestras funciones no contengan espacios, igual que los nombres de las variables.</p>
+<p>Dado que ya logramos abstraer la acción de pintar una linea a una función, hagamos lo mismo para &ldquo;moverse hacia arriba&rdquo;:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> turtle
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pintar_linea</span>():
+    <span style="color:#75715e"># Pintar una linea y volver</span>
+    turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">100</span>)
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">180</span>)
+    turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">100</span>)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">moverse</span>():
+    <span style="color:#75715e"># Moverse hacia arriba</span>
+    turtle<span style="color:#f92672">.</span>penup()
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+    turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">25</span>)
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+    turtle<span style="color:#f92672">.</span>pendown()
+
+lineas <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+<span style="color:#66d9ef">while</span> lineas <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>:
+    pintar_linea()
+    moverse()
+    <span style="color:#75715e"># Contar una linea más</span>
+    lineas <span style="color:#f92672">=</span> lineas <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+
+pintar_linea()
+</code></pre></div><p>Todo se ve bastante bien, nuestro código es mucho mas claro ahora. Ahora veremos como hacer uso de un nuevo concepto que va de la mano con las funciones: parámetros. Las funciones pueden recibir parámetros, los cuales son variables especiales que son reemplazadas por los valores que deseemos al momento de ejecutar la función.</p>
+<p>En este caso, usaremos parámetros para poder cambiar el tamaño de la caja que queremos pintar sin tener que reemplazar todos los <code>100</code> que hemos escrito.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> turtle
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pintar_linea</span>(longitud):
+    <span style="color:#75715e"># Pintar una linea y volver</span>
+    turtle<span style="color:#f92672">.</span>forward(longitud)
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">180</span>)
+    turtle<span style="color:#f92672">.</span>forward(longitud)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">moverse</span>():
+    <span style="color:#75715e"># Moverse hacia arriba</span>
+    turtle<span style="color:#f92672">.</span>penup()
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+    turtle<span style="color:#f92672">.</span>forward(<span style="color:#ae81ff">25</span>)
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+    turtle<span style="color:#f92672">.</span>pendown()
+
+lineas <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+<span style="color:#66d9ef">while</span> lineas <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>:
+    pintar_linea(<span style="color:#ae81ff">100</span>)
+    moverse()
+    <span style="color:#75715e"># Contar una linea más</span>
+    lineas <span style="color:#f92672">=</span> lineas <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+
+pintar_linea(<span style="color:#ae81ff">100</span>)
+</code></pre></div><p>De hecho, también necesitamos cambiar la función <code>moverse</code> para que reciba por parámetro la distancia que la tortuga debe moverse</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> turtle
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pintar_linea</span>(longitud):
+    <span style="color:#75715e"># Pintar una linea y volver</span>
+    turtle<span style="color:#f92672">.</span>forward(longitud)
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">180</span>)
+    turtle<span style="color:#f92672">.</span>forward(longitud)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">moverse</span>(distancia):
+    <span style="color:#75715e"># Moverse hacia arriba</span>
+    turtle<span style="color:#f92672">.</span>penup()
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+    turtle<span style="color:#f92672">.</span>forward(distancia)
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+    turtle<span style="color:#f92672">.</span>pendown()
+
+lineas <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+<span style="color:#66d9ef">while</span> lineas <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>:
+    pintar_linea(<span style="color:#ae81ff">100</span>)
+    moverse(<span style="color:#ae81ff">25</span>)
+    <span style="color:#75715e"># Contar una linea más</span>
+    lineas <span style="color:#f92672">=</span> lineas <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+
+pintar_linea(<span style="color:#ae81ff">100</span>)
+</code></pre></div><p>La ventaja de haber hecho esto, es que podemos usar una variable para almacenar
+la longitud de las líneas al comienzo de nuestro código y luego utilizarla como
+parámetro en nuestras funciones:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> turtle
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pintar_linea</span>(longitud):
+    <span style="color:#75715e"># Pintar una linea y volver</span>
+    turtle<span style="color:#f92672">.</span>forward(longitud)
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">180</span>)
+    turtle<span style="color:#f92672">.</span>forward(longitud)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">moverse</span>(distancia):
+    <span style="color:#75715e"># Moverse hacia arriba</span>
+    turtle<span style="color:#f92672">.</span>penup()
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+    turtle<span style="color:#f92672">.</span>forward(distancia)
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+    turtle<span style="color:#f92672">.</span>pendown()
+
+longitud <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>
+
+lineas <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+<span style="color:#66d9ef">while</span> lineas <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>:
+    pintar_linea(longitud)
+    moverse(longitud <span style="color:#f92672">/</span> <span style="color:#ae81ff">4</span>)
+    <span style="color:#75715e"># Contar una linea más</span>
+    lineas <span style="color:#f92672">=</span> lineas <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+
+pintar_linea(longitud)
+</code></pre></div><p>Aun mas, podemos tomar el ciclo que tenemos y ponerlo en una función nueva
+encargada de pintar varias líneas</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> turtle
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pintar_linea</span>(longitud):
+    <span style="color:#75715e"># Pintar una linea y volver</span>
+    turtle<span style="color:#f92672">.</span>forward(longitud)
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">180</span>)
+    turtle<span style="color:#f92672">.</span>forward(longitud)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">moverse</span>(distancia):
+    <span style="color:#75715e"># Moverse hacia arriba</span>
+    turtle<span style="color:#f92672">.</span>penup()
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+    turtle<span style="color:#f92672">.</span>forward(distancia)
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+    turtle<span style="color:#f92672">.</span>pendown()
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pintar_lineas</span>(longitud):
+    lineas <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+    <span style="color:#66d9ef">while</span> lineas <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>:
+        pintar_linea(longitud)
+        moverse(longitud <span style="color:#f92672">/</span> <span style="color:#ae81ff">4</span>)
+        <span style="color:#75715e"># Contar una linea más</span>
+        lineas <span style="color:#f92672">=</span> lineas <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+
+    pintar_linea(longitud)
+
+pintar_lineas(<span style="color:#ae81ff">100</span>)
+</code></pre></div><p>Además podemos añadir un parámetro más a <code>pintar_lineas</code>, para personalizar
+cuantas lineas queremos pintar</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> turtle
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pintar_linea</span>(longitud):
+    <span style="color:#75715e"># Pintar una linea y volver</span>
+    turtle<span style="color:#f92672">.</span>forward(longitud)
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">180</span>)
+    turtle<span style="color:#f92672">.</span>forward(longitud)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">moverse</span>(distancia):
+    <span style="color:#75715e"># Moverse hacia arriba</span>
+    turtle<span style="color:#f92672">.</span>penup()
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+    turtle<span style="color:#f92672">.</span>forward(distancia)
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+    turtle<span style="color:#f92672">.</span>pendown()
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pintar_lineas</span>(longitud, cuantas):
+    lineas <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+    <span style="color:#66d9ef">while</span> lineas <span style="color:#f92672">&lt;</span> cuantas:
+        pintar_linea(longitud)
+        moverse(longitud <span style="color:#f92672">/</span> cuantas)
+        <span style="color:#75715e"># Contar una linea más</span>
+        lineas <span style="color:#f92672">=</span> lineas <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+
+    pintar_linea(longitud)
+
+pintar_lineas(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">4</span>)
+</code></pre></div><p>Funciona bastante bien, pero estamos siendo imprecisos con el parámetro
+<code>cuantas</code>. Estamos pintando en total <code>5</code> líneas si <code>cuantas</code> vale <code>4</code>.
+Arreglemos esto haciendo uso de las operaciones aritméticas que ya sabemos</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> turtle
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pintar_linea</span>(longitud):
+    <span style="color:#75715e"># Pintar una linea y volver</span>
+    turtle<span style="color:#f92672">.</span>forward(longitud)
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">180</span>)
+    turtle<span style="color:#f92672">.</span>forward(longitud)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">moverse</span>(distancia):
+    <span style="color:#75715e"># Moverse hacia arriba</span>
+    turtle<span style="color:#f92672">.</span>penup()
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+    turtle<span style="color:#f92672">.</span>forward(distancia)
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+    turtle<span style="color:#f92672">.</span>pendown()
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pintar_lineas</span>(longitud, cuantas):
+    lineas <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+    <span style="color:#66d9ef">while</span> lineas <span style="color:#f92672">&lt;</span> cuantas <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>:
+        pintar_linea(longitud)
+        moverse(longitud <span style="color:#f92672">/</span> (cuantas <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>))
+        <span style="color:#75715e"># Contar una linea más</span>
+        lineas <span style="color:#f92672">=</span> lineas <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+
+    pintar_linea(longitud)
+
+pintar_lineas(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">5</span>)
+</code></pre></div><p>Ahora por fin podemos terminar de pintar nuestra cuadrícula escribiendo muy
+poco código. Para hacer las lineas horizontales haremos un pequeño truco. Si
+ejecutamos nuestro programa y giramos la pantalla 90 grados a la izquierda,
+veremos 5 lineas verticales. Esto quiere decir que si hacemos que la tortuga
+gire 90 grados a la izquierda y llamamos <code>pintar_lineas(100, 5)</code> de nuevo,
+habremos pintado 4 lineas verticales.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> turtle
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pintar_linea</span>(longitud):
+    <span style="color:#75715e"># Pintar una linea y volver</span>
+    turtle<span style="color:#f92672">.</span>forward(longitud)
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">180</span>)
+    turtle<span style="color:#f92672">.</span>forward(longitud)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">moverse</span>(distancia):
+    <span style="color:#75715e"># Moverse hacia arriba</span>
+    turtle<span style="color:#f92672">.</span>penup()
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+    turtle<span style="color:#f92672">.</span>forward(distancia)
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+    turtle<span style="color:#f92672">.</span>pendown()
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pintar_lineas</span>(longitud, cuantas):
+    lineas <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+    <span style="color:#66d9ef">while</span> lineas <span style="color:#f92672">&lt;</span> cuantas <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>:
+        pintar_linea(longitud)
+        moverse(longitud <span style="color:#f92672">/</span> (cuantas <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>))
+        <span style="color:#75715e"># Contar una linea más</span>
+        lineas <span style="color:#f92672">=</span> lineas <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+
+    pintar_linea(longitud)
+
+pintar_lineas(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">5</span>)
+turtle<span style="color:#f92672">.</span>left(<span style="color:#ae81ff">90</span>)
+pintar_lineas(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">5</span>)
+</code></pre></div><p>Genial! Para terminar, escribamos una función capaz de pintar una cuadrícula</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> turtle
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pintar_linea</span>(longitud):
+    <span style="color:#75715e"># Pintar una linea y volver</span>
+    turtle<span style="color:#f92672">.</span>forward(longitud)
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">180</span>)
+    turtle<span style="color:#f92672">.</span>forward(longitud)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">moverse</span>(distancia):
+    <span style="color:#75715e"># Moverse hacia arriba</span>
+    turtle<span style="color:#f92672">.</span>penup()
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+    turtle<span style="color:#f92672">.</span>forward(distancia)
+    turtle<span style="color:#f92672">.</span>right(<span style="color:#ae81ff">90</span>)
+    turtle<span style="color:#f92672">.</span>pendown()
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pintar_lineas</span>(longitud, cuantas):
+    lineas <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+    <span style="color:#66d9ef">while</span> lineas <span style="color:#f92672">&lt;</span> cuantas <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>:
+        pintar_linea(longitud)
+        moverse(longitud <span style="color:#f92672">/</span> (cuantas <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>))
+        <span style="color:#75715e"># Contar una linea más</span>
+        lineas <span style="color:#f92672">=</span> lineas <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+
+    pintar_linea(longitud)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pintar_cuadricula</span>(longitud, cuadros):
+    pintar_lineas(longitud, cuadros <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+    turtle<span style="color:#f92672">.</span>left(<span style="color:#ae81ff">90</span>)
+    pintar_lineas(longitud, cuadros <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+
+pintar_cuadricula(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">4</span>)
+</code></pre></div><p>Necesitamos pintar una linea mas que el número de cuadros que queremos hacer,
+justo como lo habíamos pensado en el tablero! Ahora podemos pintar una
+cuadrícula de cualquier tamaño con cualquier número de cuadros que queramos.</p>
+
+      
+    </div>
+    
+  </div>
+</section>
+
+    <script src="/js/copycode.js"></script>
+
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p></p>
+    
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/ribice/kiss">Kiss</a>.</p>
+    
+  </div>
+</section>
+
+
+
+</body>
+</html>
+
