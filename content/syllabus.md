@@ -23,8 +23,8 @@ Semana  | Tema                                       | Lecturas                 
 4       | [Flujo de control][4]                      | `[py4e]` cap. 3 y 5, [draw with turtle](https://opentechschool.github.io/python-beginners/en/simple_drawing.html) |                             |
 5       | Memoria y estructuras lineales             | `[grok]` cap. 2                  |                             |
 5       | [Funciones y abstracción][5]               | `[py4e]` cap. 4, [código](https://github.com/christianpoveda/ipc/tree/master/code/grid) | [Taller 2](../hw/taller02/)                             |
-6       | Recursión y llamado a funciones            | `[grok]` cap. 3                  |                             |
-6       | Manipulación de listas e iteradores        | `[py4e]` cap. 8                  |                             |
+6       | [Recursión y llamado a funciones][6]       | `[grok]` cap. 3                  |                             |
+6       | Manipulación de listas                     | `[py4e]` cap. 8                  |                             |
 7       | Repaso                                     |                                  |                             |
 7       | __Primer examen__                          |                                  |                             |
 13      | __Segundo examen__                         |                                  |                             |
@@ -34,6 +34,7 @@ Semana  | Tema                                       | Lecturas                 
 [3]: ../slides/complejidad.pdf
 [4]: ../slides/flujo_de_control.pdf
 [5]: ../notes/funciones
+[6]: ../notes/recursion
 
 # Calificaciones
 

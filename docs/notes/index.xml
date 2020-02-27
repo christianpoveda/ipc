@@ -6,10 +6,19 @@
     <description>Recent content in Notes on Introducción al pensamiento computacional</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <lastBuildDate>Wed, 19 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://christianpoveda.github.io/ipc/notes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Recursión y llamado a funciones</title>
+      <link>https://christianpoveda.github.io/ipc/notes/recursion/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://christianpoveda.github.io/ipc/notes/recursion/</guid>
+      <description>Notas de clase sobre recursión y llamado a funciones</description>
+    </item>
     
     <item>
       <title>Funciones y abstracción</title>

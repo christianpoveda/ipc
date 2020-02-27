@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>Recursión y llamado a funciones | Introducción al pensamiento computacional</title>
+
+
+
+<link rel="stylesheet" href="/ipc/css/style.css"/><link rel='stylesheet' href='https://christianpoveda.github.io/ipc/css/custom.css'><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="canonical" href="https://christianpoveda.github.io/ipc/notes/recursion/">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<section class="section">
+  <div class="container">
+    <nav id="nav-main" class="nav">
+      <div id="nav-name" class="nav-left">
+        <a id="nav-anchor" class="nav-item" href="https://christianpoveda.github.io/ipc/">
+          <h1 id="nav-heading" class="title is-4">Introducción al pensamiento computacional</h1>
+        </a>
+      </div>
+      
+      
+      
+      
+      
+      
+    </nav>
+
+    
+    
+    
+    
+    
+
+  </div>
+  <script src="/js/navicon-shift.js"></script>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="subtitle tags is-6 is-pulled-right">
+      
+    </div>
+    <h2 class="subtitle is-6">February 24, 2020</h2>
+    <h1 class="title">Recursión y llamado a funciones</h1>
+    
+    <div class="content">
+      <h1 id="un-repaso-sobre-funciones">Un repaso sobre funciones</h1>
+<p>Como vimos la clase anterior, las funciones nos permiten agrupar secuencias de
+instrucciones para poder abstraer comportamientos específicos. Hay dos procesos
+fundamentales para hacer uso de funciones:</p>
+<ul>
+<li>
+<p>Definición: El el proceso en el cual se define que secuencia de instrucciones
+conforman una función, también se le suele dar un nombre a la función y si se
+desea, uno o mas parámetros.</p>
+</li>
+<li>
+<p>Invocación o llamado: Es el proceso en el cual se declara que se hará uso de
+una función ya definida, es decir, se declara que se deben ejecutar las
+instrucciones que conforman la función.</p>
+</li>
+</ul>
+<h1 id="entrada-y-salida">Entrada y salida</h1>
+<p>Como bien sabemos, las funciones pueden recibir parámetros lo cual permite
+tener un control mas fino sobre el comportamiento de estas. Los parámetros
+pueden ser pensados como las entradas de la función, son el insumo que la
+función requiere para de hecho poder ejecutar las instrucciones que le
+corresponden.</p>
+<p>De la misma manera, una función tiene una salida, la cual se conoce como el
+retorno de la función. Este retorno es utilizado para que una función no solo
+ejecute un conjunto de acciones, sino que al terminar esta ejecución, devuelva
+un valor.</p>
+<p>Para representar las entradas y salida de una función usando diagramas de
+flujo, suelen utilizarse cajas con forma de trapecio:</p>
+<p>A continuación podemos ver una representación de la misma función <code>promedio</code> en
+Python:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">promedio</span>(a, b):
+    m <span style="color:#ff79c6">=</span> (a <span style="color:#ff79c6">+</span> b) <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">2</span>
+    <span style="color:#ff79c6">return</span> m
+</code></pre></div><p>Noten como las entradas de la función se encuentran entre paréntesis junto al
+nombre de la función, mientras que la salida de la función se especifica
+haciendo uso de la palabra clave <code>return</code>.</p>
+<p>En Python y otros lenguajes, una función no ejecuta ninguna instrucción que se
+encuentre después del retorno. Por ejemplo, al ejecutar el siguiente programa:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">cuadrado</span>(x):
+    <span style="color:#ff79c6">return</span> x <span style="color:#ff79c6">*</span> x
+    <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;Hola&#34;</span>)
+
+<span style="color:#ff79c6">print</span>(cuadrado(<span style="color:#bd93f9">5</span>))
+</code></pre></div><p>se imprimirá <code>25</code> pero no <code>Hola</code>.</p>
+<h1 id="recursión">Recursión</h1>
+<p>dado que una función puede llamar a otras funciones dentro de su definición. De
+hecho es posible escribir funciones que se llamen a si mismas, este tipo de
+funciones se conocen como funciones recursivas</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">hola_por_siempre</span>():
+    <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;Hola&#34;</span>)
+    hola_por_siempre()
+
+hola_por_siempre()
+</code></pre></div><p>La recursión suele usarse como una alternativa a los ciclos. Para entender
+mejor como se utilizan las funciones recursivas, tratemos de entender que hace
+la siguiente función:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">carl</span>(a, b):
+    <span style="color:#ff79c6">if</span> a <span style="color:#ff79c6">&lt;</span> b:
+        <span style="color:#ff79c6">return</span> a <span style="color:#ff79c6">+</span> carl(a <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>, b)
+    <span style="color:#ff79c6">else</span>:
+        <span style="color:#ff79c6">return</span> a
+</code></pre></div><p>por ejemplo si ejecutamos <code>carl(1, 4)</code>, esta retornaría <code>1 + carl(2, 4)</code>, es
+decir ahora debe ejecutarse <code>carl(2, 4)</code> y sumarle su resultado a <code>1</code>. Al
+ejecutar <code>carl(2, 4)</code> esta retornaría <code>2 + carl(3, 4)</code>, luego ahora debe
+ejecutarse <code>carl(3, 4)</code> y su resultado debe sumarse a <code>2</code> para obtener el
+resultado de <code>carl(2, 4)</code>, lo cual a la vez debe sumarse a <code>1</code> para obtener el
+resultado de <code>carl(1, 4)</code>. Hagamos el proceso completo de forma ordenada:</p>
+<ul>
+<li><code>carl(1, 4)</code> retorna <code>1 + carl(2, 4)</code>, es necesario ejecutar <code>carl(2, 4)</code>.</li>
+<li><code>carl(2, 4)</code> retorna <code>2 + carl(3, 4)</code>, es necesario ejecutar <code>carl(2, 4)</code>.</li>
+<li><code>carl(3, 4)</code> retorna <code>3 + carl(4, 4)</code>, es necesario ejecutar <code>carl(2, 4)</code>.</li>
+<li><code>carl(4, 4)</code> retorna <code>4</code>, no es necesario ejecutar mas instrucciones.</li>
+</ul>
+<p>Luego, podemos finalmente saber cual es el valor retornado por <code>carl(1, 4)</code>:</p>
+<ul>
+<li><code>carl(3, 4)</code> retorna <code>3 + 4</code>, dado que <code>carl(4, 4)</code> retorna <code>4</code>.</li>
+<li><code>carl(2, 4)</code> retorna <code>2 + 3 + 4</code>, dado que <code>carl(3, 4)</code> retorna <code>3 + 4</code>.</li>
+<li><code>carl(1, 4)</code> retorna <code>1 + 2 + 3 + 4</code>, dado que <code>carl(2, 4)</code> retorna <code>2 + 3 + 4</code>.</li>
+</ul>
+<p>En conclusión <code>carl(1, 4)</code> retorna <code>10</code>, la suma de todos los números entre <code>1</code>
+y <code>4</code>. De hecho <code>carl(a, b)</code> retorna la suma de todos los números entre <code>a</code> y
+<code>b</code>. Tratemos de examinar mas a conciencia el comportamiento de esta función.
+<code>carl(a , b)</code> aparentemente retorna la suma de todos los números entre <code>a</code> y
+<code>b</code>, esto lo hace comparando <code>a</code> con <code>b</code>:</p>
+<ul>
+<li>si <code>a</code> es menor a <code>b</code>, entonces se retorna <code>a +  carl(a + 1, b)</code>, es decir,
+<code>a</code> mas la suma de todos los números entre <code>a + 1</code> y <code>b</code></li>
+<li>por otro lado, si <code>a</code> es mayor o igual a <code>b</code>, simplemente se retorna <code>a.</code></li>
+</ul>
+<p>En otras palabras, esta función fue escrita basándose en la idea de que sumar
+todos los números entre <code>a</code> y <code>b</code> es lo mismo que primero sumar todos los
+números entre <code>a + 1</code> y <code>b</code> y luego a eso se le debe sumar <code>a</code>, excepto en el
+caso cuando <code>a</code> y <code>b</code> son iguales, dado que en tal caso la suma de todos los
+números entre <code>a</code> y <code>a</code> es simplemente <code>a</code>.</p>
+<p>Ahora, es perfectamente posible escribir otra función que haga lo mismo usando
+solamente <code>ciclos</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">fred</span>(a, b):
+    suma <span style="color:#ff79c6">=</span> a
+    <span style="color:#ff79c6">while</span> a <span style="color:#ff79c6">&lt;</span> b:
+        a <span style="color:#ff79c6">=</span> a <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>
+        suma <span style="color:#ff79c6">=</span> suma <span style="color:#ff79c6">+</span> a
+    <span style="color:#ff79c6">return</span> suma
+</code></pre></div><p>Sin embargo, ninguna solución es mejor que la otra, simplemente son soluciones
+distintas.</p>
+
+      
+    </div>
+    
+  </div>
+</section>
+
+    <script src="/js/copycode.js"></script>
+
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p></p>
+    
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/ribice/kiss">Kiss</a>.</p>
+    
+  </div>
+</section>
+
+
+
+</body>
+</html>
+
