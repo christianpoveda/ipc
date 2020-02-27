@@ -35,8 +35,9 @@ ejecute un conjunto de acciones, sino que al terminar esta ejecución, devuelva
 un valor.
 
 Para representar las entradas y salida de una función usando diagramas de
-flujo, suelen utilizarse cajas con forma de trapecio:
+flujo, suelen utilizarse cajas con forma de paralelogramo:
 
+![](../../images/flowchart_io.svg)
 
 A continuación podemos ver una representación de la misma función `promedio` en
 Python:
