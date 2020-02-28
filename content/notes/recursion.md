@@ -4,7 +4,7 @@ date: 2020-02-24
 linktitle: Recursión y llamado a funciones
 title: Recursión y llamado a funciones
 summary: "Notas de clase sobre recursión y llamado a funciones"
-weight: 30
+weight: 20
 ---
 
 # Un repaso sobre funciones

@@ -4,7 +4,7 @@ date: 2020-02-19
 linktitle: Funciones y abstracción
 title: Funciones y abstracción
 summary: "Notas de clase sobre funciones y abstracción"
-weight: 30
+weight: 20
 ---
 
 En las clases anteriores hemos aprendido cómo hacer tareas repetitivas usando
