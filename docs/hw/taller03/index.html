@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>Taller 3 | Introducción al pensamiento computacional</title>
+
+
+
+<link rel="stylesheet" href="/ipc/css/style.css"/><link rel='stylesheet' href='https://christianpoveda.github.io/ipc/css/custom.css'><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="canonical" href="https://christianpoveda.github.io/ipc/hw/taller03/">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<section class="section">
+  <div class="container">
+    <nav id="nav-main" class="nav">
+      <div id="nav-name" class="nav-left">
+        <a id="nav-anchor" class="nav-item" href="https://christianpoveda.github.io/ipc/">
+          <h1 id="nav-heading" class="title is-4">Introducción al pensamiento computacional</h1>
+        </a>
+      </div>
+      
+      
+      
+      
+      
+      
+    </nav>
+
+    
+    
+    
+    
+    
+
+  </div>
+  <script src="/js/navicon-shift.js"></script>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="subtitle tags is-6 is-pulled-right">
+      
+    </div>
+    <h2 class="subtitle is-6">March 25, 2020</h2>
+    <h1 class="title">Taller 3</h1>
+    
+    <div class="content">
+      <h1 id="instrucciones">Instrucciones</h1>
+<ul>
+<li>Este taller puede ser realizado de forma individual o de a parejas.</li>
+<li>Debe ser entregado al correo electrónico
+<a href="mailto:christian.poveda+ipc_taller02@correo.usa.edu.co">christian.poveda+ipc_taller03@correo.usa.edu.co</a>
+a mas tardar el 2020-04-01 al comienzo de la clase, de acuerdo a lo
+establecido en el syllabus respecto al método de entrega.</li>
+</ul>
+<h1 id="enunciado">Enunciado</h1>
+<p>Usando como base el siguiente código:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">from</span> datetime <span style="color:#ff79c6">import</span> date
+
+<span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Tarea</span>:
+  <span style="color:#ff79c6">def</span> __init__(self, descripcion, vencimiento):
+    self<span style="color:#ff79c6">.</span>descripcion <span style="color:#ff79c6">=</span> descripcion
+    self<span style="color:#ff79c6">.</span>terminada <span style="color:#ff79c6">=</span> False
+    self<span style="color:#ff79c6">.</span>vencimiento <span style="color:#ff79c6">=</span> vencimiento
+
+  <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">terminar</span>(self):
+    self<span style="color:#ff79c6">.</span>terminada <span style="color:#ff79c6">=</span> True
+
+  <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">esta_vencida</span>(self):
+    <span style="color:#ff79c6">return</span> self<span style="color:#ff79c6">.</span>vencimiento <span style="color:#ff79c6">&lt;</span> date<span style="color:#ff79c6">.</span>today()
+
+  <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">esta_terminada</span>(self):
+    <span style="color:#ff79c6">return</span> self<span style="color:#ff79c6">.</span>terminada
+
+
+<span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Manejador</span>:
+  <span style="color:#ff79c6">def</span> __init__(self):
+    self<span style="color:#ff79c6">.</span>tareas <span style="color:#ff79c6">=</span> []
+</code></pre></div><p>Realice los siguientes ejercicios:</p>
+<ol>
+<li>
+<p>Dentro de la clase <code>Tarea</code>:</p>
+<p>1.1. Escribir un método <code>__lt__</code> que recibe como parámetro adicional otra tarea y retorna <code>True</code> si la fecha de vencimiento de la tarea actual es menor que la de la otra tarea.</p>
+<p>Caso de prueba:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">tarea1 <span style="color:#ff79c6">=</span> Tarea(<span style="color:#f1fa8c">&#34;Preparar el almuerzo&#34;</span>, date(<span style="color:#bd93f9">2020</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">10</span>))
+tarea2 <span style="color:#ff79c6">=</span> Tarea(<span style="color:#f1fa8c">&#34;Hacer compras&#34;</span>, date(<span style="color:#bd93f9">2020</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">11</span>))
+
+<span style="color:#ff79c6">print</span>(tarea1 <span style="color:#ff79c6">&lt;</span> tarea2) <span style="color:#6272a4"># Imprime `True`</span>
+<span style="color:#ff79c6">print</span>(tarea2 <span style="color:#ff79c6">&lt;</span> tarea1) <span style="color:#6272a4"># Imprime `False`</span>
+<span style="color:#ff79c6">print</span>(tarea1 <span style="color:#ff79c6">&lt;</span> tarea1) <span style="color:#6272a4"># Imprime `False`</span>
+</code></pre></div><p>1.2. Escribir un método <code>__repr__</code>, sin parámetros adicionales, el cual retorna un string con una representación del objeto que incluya la descripción y la fecha de vencimiento.</p>
+<p>Caso de prueba:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">tarea1 <span style="color:#ff79c6">=</span> Tarea(<span style="color:#f1fa8c">&#34;Preparar el almuerzo&#34;</span>, date(<span style="color:#bd93f9">2020</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">10</span>))
+
+<span style="color:#ff79c6">print</span>(tarea1) <span style="color:#6272a4"># Imprime `Preparar el almuerzo (vence el 2020-01-10)`</span>
+</code></pre></div><p>Pista: utilice <code>str(objeto)</code> para obtener una representación como string de los objetos que necesite.</p>
+</li>
+<li>
+<p>Dentro de la clase <code>Manejador</code>:</p>
+<p>2.1. Escriba un método <code>agregar_tarea</code> con un parámetro adicional <code>tarea</code>, el cual agrega <code>tarea</code> al final de la lista de tareas dentro de <code>Manejador</code>.</p>
+<p>Caso de prueba:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">tarea <span style="color:#ff79c6">=</span> Tarea(<span style="color:#f1fa8c">&#34;Preparar el almuerzo&#34;</span>, date(<span style="color:#bd93f9">2020</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">10</span>))
+
+manejador <span style="color:#ff79c6">=</span> Manejador()
+manejador<span style="color:#ff79c6">.</span>agregar_tarea(tarea)
+
+<span style="color:#ff79c6">print</span>(manejador<span style="color:#ff79c6">.</span>tareas) <span style="color:#6272a4"># Imprime `[Preparar el almuerzo (vence el 2020-01-10)]`</span>
+</code></pre></div><p>2.2. Escriba un método <code>terminar_tarea</code> con un parámetro adicional <code>indice</code>, el cual marca como terminada la tarea que se encuentre en la posición dada por <code>indice</code> dentro de la lista de tareas.</p>
+<p>Caso de prueba:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">tarea <span style="color:#ff79c6">=</span> Tarea(<span style="color:#f1fa8c">&#34;Preparar el almuerzo&#34;</span>, date(<span style="color:#bd93f9">2020</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">10</span>))
+
+manejador <span style="color:#ff79c6">=</span> Manejador()
+manejador<span style="color:#ff79c6">.</span>agregar_tarea(tarea)
+manejador<span style="color:#ff79c6">.</span>terminar_tarea(<span style="color:#bd93f9">0</span>)
+
+<span style="color:#ff79c6">print</span>(manejador<span style="color:#ff79c6">.</span>tareas[<span style="color:#bd93f9">0</span>]<span style="color:#ff79c6">.</span>esta_terminada()) <span style="color:#6272a4"># Imprime `True`</span>
+</code></pre></div><p>2.3. Escriba un método <code>tarea_mas_urgente</code> el cual busca la tarea con la menor fecha de vencimiento.</p>
+<p>Caso de prueba:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">tarea1 <span style="color:#ff79c6">=</span> Tarea(<span style="color:#f1fa8c">&#34;Preparar el almuerzo&#34;</span>, date(<span style="color:#bd93f9">2020</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">10</span>))
+tarea2 <span style="color:#ff79c6">=</span> Tarea(<span style="color:#f1fa8c">&#34;Hacer compras&#34;</span>, date(<span style="color:#bd93f9">2020</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">11</span>))
+
+manejador <span style="color:#ff79c6">=</span> Manejador()
+manejador<span style="color:#ff79c6">.</span>agregar_tarea(tarea1)
+manejador<span style="color:#ff79c6">.</span>agregar_tarea(tarea2)
+
+<span style="color:#ff79c6">print</span>(manejador<span style="color:#ff79c6">.</span>tarea_mas_urgente()) <span style="color:#6272a4"># Imprime `Preparar el almuerzo (vence el 2020-01-10)`</span>
+</code></pre></div><p>Pista: Gracias al punto 1.1, es posible comparar dos tareas por su fecha de vencimiento usando <code>tarea1 &lt; tarea2</code>. Por esto, encontrar la tarea mas urgente es lo mismo que buscar la &ldquo;mínima&rdquo; tarea dentro de la lista de tareas.</p>
+<p>2.4. Escriba un método <code>tareas_sin_terminar</code> el cual retorna una lista con las tareas que no se han marcado como terminadas.
+Caso de prueba:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">tarea1 <span style="color:#ff79c6">=</span> Tarea(<span style="color:#f1fa8c">&#34;Preparar el almuerzo&#34;</span>, date(<span style="color:#bd93f9">2020</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">10</span>))
+tarea2 <span style="color:#ff79c6">=</span> Tarea(<span style="color:#f1fa8c">&#34;Hacer compras&#34;</span>, date(<span style="color:#bd93f9">2020</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">11</span>))
+
+manejador <span style="color:#ff79c6">=</span> Manejador()
+manejador<span style="color:#ff79c6">.</span>agregar_tarea(tarea1)
+manejador<span style="color:#ff79c6">.</span>agregar_tarea(tarea2)
+
+manejador<span style="color:#ff79c6">.</span>terminar_tarea(<span style="color:#bd93f9">0</span>)
+
+<span style="color:#ff79c6">print</span>(manejador<span style="color:#ff79c6">.</span>tareas_sin_terminar()) <span style="color:#6272a4"># Imprime `[Hacer compras (vence el 2020-01-11)]`</span>
+</code></pre></div></li>
+</ol>
+
+      
+    </div>
+    
+  </div>
+</section>
+
+    <script src="/js/copycode.js"></script>
+
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p></p>
+    
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/ribice/kiss">Kiss</a>.</p>
+    
+  </div>
+</section>
+
+
+
+</body>
+</html>
+

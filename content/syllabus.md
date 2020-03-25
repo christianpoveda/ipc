@@ -13,21 +13,23 @@ El propósito de esta asignatura consiste en que el estudiante pueda representar
 de forma autónoma problemas científicos y de propósito general, y a su vez sea
 capaz de desarrollar algoritmos que faciliten la solución a estos problemas.
 
-
 # Cronograma
 
-Semana  | Tema                                       | Lecturas                         | Talleres                    |
-------- |------------------------------------------- | -------------------------------- | --------------------------- |
-3       | [Introducción a los algoritmos][1]         | `[grok]` cap. 1, `[py4e]` cap. 2 |                             |
-4       | [Diagramas de flujo][2] y [complejidad][3] | `[grok]` cap. 1                  | [Taller 1](../hw/taller01/) |
-4       | [Flujo de control][4]                      | `[py4e]` cap. 3 y 5, [draw with turtle](https://opentechschool.github.io/python-beginners/en/simple_drawing.html) |                             |
-5       | Memoria y estructuras lineales             | `[grok]` cap. 2                  |                             |
-5       | [Funciones y abstracción][5]               | `[py4e]` cap. 4, [código](https://github.com/christianpoveda/ipc/tree/master/code/grid) | [Taller 2](../hw/taller02/)                             |
-6       | [Recursión y llamado a funciones][6]       | `[grok]` cap. 3                  |                             |
-6       | Manipulación de listas                     | `[py4e]` cap. 8                  |                             |
-7       | Repaso                                     |                                  |                             |
-7       | __Primer examen__                          |                                  |                             |
-13      | __Segundo examen__                         |                                  |                             |
+Semana  | Tema                                       | Lecturas                                    | Talleres                    |
+------- |------------------------------------------- | ------------------------------------------- | --------------------------- |
+3       | [Introducción a los algoritmos][1]         | `[grok]` cap. 1, `[py4e]` cap. 2            |                             |
+4       | [Diagramas de flujo][2] y [complejidad][3] | `[grok]` cap. 1                             | [Taller 1](../hw/taller01/) |
+4       | [Flujo de control][4]                      | `[py4e]` cap. 3 y 5, [tutorial turtle][dwt] |                             |
+5       | Memoria y estructuras lineales             | `[grok]` cap. 2                             |                             |
+5       | [Funciones y abstracción][5]               | `[py4e]` cap. 4                             | [Taller 2](../hw/taller02/) |
+6       | [Recursión y llamado a funciones][6]       | `[grok]` cap. 2                             |                             |
+6       | Manipulación de listas                     | `[py4e]` cap. 8                             |                             |
+7       | Repaso                                     |                                             |                             |
+7       | __Primer examen__                          |                                             |                             |
+8       | Dividir y conquistar                       | `[grok]` cap. 3                             |                             |
+9       | Suspensión de clases                       |                                             |                             |
+10      | Programación orientada por objetos         | `[py4e]` cap. 14, `[tlcs]` cap. 15          | [Taller 3](../hw/taller03/) |
+13      | __Segundo examen__                         |                                             |                             |
 
 [1]: ../slides/primeros_pasos.pdf
 [2]: ../slides/diagramas_de_flujo.pdf
@@ -35,7 +37,7 @@ Semana  | Tema                                       | Lecturas                 
 [4]: ../slides/flujo_de_control.pdf
 [5]: ../notes/funciones
 [6]: ../notes/recursion
-
+[dwt]: https://opentechschool.github.io/python-beginners/en/simple_drawing.html
 # Calificaciones
 
 Se realizarán tres exámenes con los siguientes porcentajes:
