@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>Taller 4 | Introducción al pensamiento computacional</title>
+
+
+
+<link rel="stylesheet" href="/ipc/css/style.css"/><link rel='stylesheet' href='https://christianpoveda.github.io/ipc/css/custom.css'><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="canonical" href="https://christianpoveda.github.io/ipc/hw/taller04/">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<section class="section">
+  <div class="container">
+    <nav id="nav-main" class="nav">
+      <div id="nav-name" class="nav-left">
+        <a id="nav-anchor" class="nav-item" href="https://christianpoveda.github.io/ipc/">
+          <h1 id="nav-heading" class="title is-4">Introducción al pensamiento computacional</h1>
+        </a>
+      </div>
+      
+      
+      
+      
+      
+      
+    </nav>
+
+    
+    
+    
+    
+    
+
+  </div>
+  <script src="/js/navicon-shift.js"></script>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="subtitle tags is-6 is-pulled-right">
+      
+    </div>
+    <h2 class="subtitle is-6">April 1, 2020</h2>
+    <h1 class="title">Taller 4</h1>
+    
+    <div class="content">
+      <h1 id="instrucciones">Instrucciones</h1>
+<ul>
+<li>Este taller puede ser realizado de forma individual o de a parejas.</li>
+<li>Debe ser entregado al correo electrónico
+<a href="mailto:christian.poveda+ipc_taller02@correo.usa.edu.co">christian.poveda+ipc_taller04@correo.usa.edu.co</a>
+a mas tardar el 2020-04-08 al comienzo de la clase, de acuerdo a lo
+establecido en el syllabus respecto al método de entrega.</li>
+</ul>
+<h1 id="enunciado">Enunciado</h1>
+<p>Para cada uno de los problemas de este taller:</p>
+<p>a. Modelar las entidades del problema como un grafo. Debe mencionar
+explícitamente que representan tanto los nodos como las aristas del grafo.</p>
+<p>b. Traduzca el problema a un problema sobre el grafo que construyó.</p>
+<p>c. Resuelva el problema de grafos asociado al problema original y traduzca la
+solución de vuelta al contexto del problema.</p>
+<h1 id="problemas">Problemas</h1>
+<ol>
+<li>Alicia, Beto, Camila, David, Enrique, Francisco y Gabriela han decidido
+salir a comer y el restaurante al que van solo tiene mesas redondas. Algunos de
+los integrantes tienen problemas entre ellos y por lo tanto no les gustaría
+sentarse uno al lado del otro:
+<ul>
+<li>Alicia no se quiere sentar al lado de Beto o Camila.</li>
+<li>Beto no se quiere sentar al lado de Camila, Enrique o Gabriela.</li>
+<li>Camila no se quiere sentar al lado de David o Gabriela.</li>
+<li>Enrique no se quiere sentar al lado de Gabriela.</li>
+</ul>
+</li>
+</ol>
+<p>Encuentre, si es posible, una forma en la que todos se puedan sentar y a la vez
+todos estén a gusto con sus restricciones.</p>
+<ol start="2">
+<li>Usted se encuentra trabajando en el diseño de una nueva refinería de
+petroleo y es necesario minimizar el espacio requerido para la refinería.
+Después de haber estudiado el proceso de refinamiento, usted ha encontrado
+que estas son las entradas y salidas de cada proceso de refinamiento:</li>
+</ol>
+<ul>
+<li>Destilación atmosférica: Se destila petróleo crudo para obtener nafta,
+keroseno diesel, gas residual y residuos atmosféricos</li>
+<li>Hidroteatro: Transforma el nafta en gasolina.</li>
+<li>Destilador de vacío: A partir de los residuos atmosféricos se produce aceite
+pesado y aceite liviano.</li>
+<li>Craqueo catalítico: A partir de aceite liviano se produce nafta y butileno.</li>
+<li>Hidrocraqueo: A partir de aceite pesado se produce diésel, gasolina y butano.</li>
+<li>Alquilación: A partir de butano y butileno se produce gasolina.</li>
+<li>Procesamiento de gas: A partir del gas residual se produce butano.</li>
+<li>Mezcla de gasolina: Se reúne toda la gasolina producida.</li>
+<li>Recolección de diésel: Se reúne todo el diésel producido.</li>
+<li>Recolección de queroseno: Se reúne todo el queroseno producido.</li>
+</ul>
+<p>¿Cómo puede organizar usted las etapas de refinamiento para que todas las
+tuberías que conectan las distintas etapas vayan en el mismo sentido?</p>
+<ol start="3">
+<li>Usted se encuentra visitando Europa y necesita viajar de Berlin a Zagreb. A continuación encuentra el costo de un tiquete de tren entre dos ciudades, usted puede tomar cualquier ruta de tren en el sentido que desee:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Ruta</th>
+<th>Valor del tiquete</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Berlín - Bruselas</td>
+<td>60</td>
+</tr>
+<tr>
+<td>Berlín - Copenhague</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Zagreb - Bruselas</td>
+<td>160</td>
+</tr>
+<tr>
+<td>Bruselas - París</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Zagreb - Copenhague</td>
+<td>180</td>
+</tr>
+<tr>
+<td>Zagreb - Tallin</td>
+<td>90</td>
+</tr>
+<tr>
+<td>París - Zagreb</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Copenhague - Tallin</td>
+<td>40</td>
+</tr>
+<tr>
+<td>Tallin - Paris</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<p>¿Cuál es la ruta menos costosa?</p>
+
+      
+    </div>
+    
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p></p>
+    
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/ribice/kiss">Kiss</a>.</p>
+    
+  </div>
+</section>
+
+
+
+</body>
+</html>
+
