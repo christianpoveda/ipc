@@ -23,6 +23,8 @@ explícitamente que representan tanto los nodos como las aristas del grafo.
 
 b. Traduzca el problema a un problema sobre el grafo que construyó.
 
+c. Dibuje el grafo que representa su problema (puede apoyarse en [esta](https://csacademy.com/app/graph_editor/) herramienta).
+
 c. Resuelva el problema de grafos asociado al problema original y traduzca la
 solución de vuelta al contexto del problema.
 
