@@ -27,8 +27,11 @@ Semana  | Tema                                       | Lecturas                 
 7       | Repaso                                     |                                             |                             |
 7       | __Primer examen__                          |                                             |                             |
 8       | Dividir y conquistar                       | `[grok]` cap. 3                             |                             |
-9       | Suspensión de clases                       |                                             |                             |
+9       | _Suspensión de clases_                     |                                             |                             |
 10      | Programación orientada por objetos         | `[py4e]` cap. 14, `[tlcs]` cap. 15          | [Taller 3](../hw/taller03/) |
+11      | Teoría de grafos                           | `[py4e]` cap. 6                             | [Taller 4](../hw/taller04/) |
+12      | _Semana Santa_                             |                                             |                             |
+13      | Repaso                                     |                                             |                             |
 13      | __Segundo examen__                         |                                             |                             |
 
 [1]: ../slides/primeros_pasos.pdf
