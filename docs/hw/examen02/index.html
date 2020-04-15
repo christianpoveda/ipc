@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>Examen 2 | Introducción al pensamiento computacional</title>
+
+
+
+<link rel="stylesheet" href="/ipc/css/style.css"/><link rel='stylesheet' href='https://christianpoveda.github.io/ipc/css/custom.css'><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="canonical" href="https://christianpoveda.github.io/ipc/hw/examen02/">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<section class="section">
+  <div class="container">
+    <nav id="nav-main" class="nav">
+      <div id="nav-name" class="nav-left">
+        <a id="nav-anchor" class="nav-item" href="https://christianpoveda.github.io/ipc/">
+          <h1 id="nav-heading" class="title is-4">Introducción al pensamiento computacional</h1>
+        </a>
+      </div>
+      
+      
+      
+      
+      
+      
+    </nav>
+
+    
+    
+    
+    
+    
+
+  </div>
+  <script src="/js/navicon-shift.js"></script>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="subtitle tags is-6 is-pulled-right">
+      
+    </div>
+    <h2 class="subtitle is-6">April 14, 2020</h2>
+    <h1 class="title">Examen 2</h1>
+    
+    <div class="content">
+      <h1 id="instrucciones">Instrucciones</h1>
+<ul>
+<li>Este examen puede ser realizado de forma individual o de a parejas.</li>
+<li>Debe ser entregado al correo electrónico
+<a href="mailto:christian.poveda+ipc_examen02@correo.usa.edu.co">christian.poveda+ipc_examen02@correo.usa.edu.co</a>
+a mas tardar el 2020-04-22 al comienzo de la clase, de acuerdo a lo
+establecido en el syllabus respecto al método de entrega.</li>
+</ul>
+<h1 id="enunciado">Enunciado</h1>
+<p>El propósito de este taller es escribir una herramienta que le permita
+encontrar un orden topológico para cualquier grafo y utilizar dicha herramienta
+para resolver algunos problemas. Extienda el siguiente programa como se
+menciona en la sección de ejercicios y luego resuelva los problemas en la
+sección de problemas.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Nodo</span>:
+    <span style="color:#ff79c6">def</span> __init__(self, contenido):
+        self<span style="color:#ff79c6">.</span>contenido <span style="color:#ff79c6">=</span> contenido
+        self<span style="color:#ff79c6">.</span>vecinos <span style="color:#ff79c6">=</span> []
+
+    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">agregar_vecino</span>(self, indice_vecino):
+        self<span style="color:#ff79c6">.</span>vecinos<span style="color:#ff79c6">.</span>append(indice_vecino)
+
+    <span style="color:#ff79c6">def</span> __repr__(self):
+        <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#34;Nodo(&#34;</span> <span style="color:#ff79c6">+</span> <span style="color:#8be9fd;font-style:italic">str</span>(self<span style="color:#ff79c6">.</span>contenido) <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;)&#34;</span>
+
+
+<span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Grafo</span>:
+    <span style="color:#ff79c6">def</span> __init__(self):
+        self<span style="color:#ff79c6">.</span>nodos <span style="color:#ff79c6">=</span> []
+
+    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">agregar_nodo</span>(self, contenido):
+        self<span style="color:#ff79c6">.</span>nodos<span style="color:#ff79c6">.</span>append(Nodo(contenido))
+
+</code></pre></div><h1 id="representación">Representación</h1>
+<p>El programa que se le entrega cuenta con dos clases:</p>
+<ul>
+<li>La clase <code>Grafo</code> con un único atributo <code>nodos</code>, el cual es una lista que
+contiene objetos de clase <code>Nodo</code>.</li>
+<li>La clase <code>Nodo</code> la cual tiene dos atributos: <code>contenido</code>, el cual representa
+el contenido puntual del nodo, y <code>vecinos</code> el cual es una lista con los
+índices de los vecinos del nodo. Estos indices se toman respecto a la lista
+de nodos que contiene la clase <code>Grafo</code>.</li>
+</ul>
+<p>A manera de ejemplo, el siguiente grafo</p>
+<p><img src="../../images/graph.png" alt=""></p>
+<p>Se debe representar de la siguiente manera</p>
+<table>
+<thead>
+<tr>
+<th>Indice</th>
+<th>Contenido</th>
+<th>Vecinos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>&quot;A&quot;</code></td>
+<td><code>[1, 6]</code></td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td><code>&quot;B&quot;</code></td>
+<td><code>[2, 4, 5]</code></td>
+</tr>
+<tr>
+<td><code>2</code></td>
+<td><code>&quot;C&quot;</code></td>
+<td><code>[3]</code></td>
+</tr>
+<tr>
+<td><code>3</code></td>
+<td><code>&quot;D&quot;</code></td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td><code>4</code></td>
+<td><code>&quot;E&quot;</code></td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td><code>5</code></td>
+<td><code>&quot;F&quot;</code></td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td><code>6</code></td>
+<td><code>&quot;G&quot;</code></td>
+<td><code>[5]</code></td>
+</tr>
+</tbody>
+</table>
+<h1 id="ejercicios">Ejercicios</h1>
+<ol>
+<li>
+<p>Escriba una función <code>repetir</code>, la cual recibe dos argumentos <code>veces</code> y
+<code>valor</code>. Esta función debe retornar una lista de <code>veces</code> elementos donde
+todos los elementos son iguales a <code>valor</code>. Por ejemplo, <code>repetir(3, &quot;Hola&quot;)</code>
+debe retornar <code>[&quot;Hola&quot;, &quot;Hola&quot;, &quot;Hola&quot;]</code>.</p>
+</li>
+<li>
+<p>Agregue un método <code>indice_nodo</code> a la clase <code>Grafo</code>. Este método recibe un
+argumento adicional <code>contenido</code> y debe retornar el indice del nodo con
+contenido igual a <code>contenido</code>. Si no hay un nodo cuyo contenido sea igual a
+<code>contenido</code>,  debe retornar <code>None</code>. Caso de prueba</p>
+</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">grafo <span style="color:#ff79c6">=</span> Grafo()
+
+grafo<span style="color:#ff79c6">.</span>agregar_nodo(<span style="color:#f1fa8c">&#34;A&#34;</span>)
+grafo<span style="color:#ff79c6">.</span>agregar_nodo(<span style="color:#f1fa8c">&#34;B&#34;</span>)
+
+<span style="color:#ff79c6">print</span>(grafo<span style="color:#ff79c6">.</span>indice_nodo(<span style="color:#f1fa8c">&#34;A&#34;</span>)) <span style="color:#6272a4"># Debe imprimir `0`</span>
+<span style="color:#ff79c6">print</span>(grafo<span style="color:#ff79c6">.</span>indice_nodo(<span style="color:#f1fa8c">&#34;B&#34;</span>)) <span style="color:#6272a4"># Debe imprimir `1`</span>
+<span style="color:#ff79c6">print</span>(grafo<span style="color:#ff79c6">.</span>indice_nodo(<span style="color:#f1fa8c">&#34;C&#34;</span>)) <span style="color:#6272a4"># Debe imprimir `None`</span>
+</code></pre></div><ol start="3">
+<li>Agregue un método <code>agregar_arista</code> a la clase <code>Grafo</code>. Este método recibe
+dos argumentos adicionales <code>contenido_desde</code> y <code>contenido_hasta</code>. Además,
+este método debe encontrar un nodo con contenido igual a <code>contenido_desde</code> y
+agregar a la lista de vecinos el indice del nodo con contenido igual a
+<code>contenido_hasta</code>.</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">grafo <span style="color:#ff79c6">=</span> Grafo()
+
+grafo<span style="color:#ff79c6">.</span>agregar_nodo(<span style="color:#f1fa8c">&#34;A&#34;</span>)
+grafo<span style="color:#ff79c6">.</span>agregar_nodo(<span style="color:#f1fa8c">&#34;B&#34;</span>)
+grafo<span style="color:#ff79c6">.</span>agregar_nodo(<span style="color:#f1fa8c">&#34;C&#34;</span>)
+
+grafo<span style="color:#ff79c6">.</span>agregar_arista(<span style="color:#f1fa8c">&#34;A&#34;</span>, <span style="color:#f1fa8c">&#34;B&#34;</span>)
+grafo<span style="color:#ff79c6">.</span>agregar_arista(<span style="color:#f1fa8c">&#34;A&#34;</span>, <span style="color:#f1fa8c">&#34;C&#34;</span>)
+
+<span style="color:#ff79c6">print</span>(grafo<span style="color:#ff79c6">.</span>nodos[<span style="color:#bd93f9">0</span>]<span style="color:#ff79c6">.</span>vecinos) <span style="color:#6272a4"># Debe imprimir `[1, 2]`</span>
+</code></pre></div><p>Los puntos 4 y 5 implementan el algoritmo de orden topológico que se expuso en
+clase. Es conveniente realizar estos dos puntos teniendo en cuenta esta
+explicación. Usted puede realizar una implementación alternativa del algoritmo
+o incluso implementar un algoritmo distinto si así lo desea.</p>
+<ol start="4">
+<li>
+<p>Agregue un método <code>visitar</code> a la clase <code>Grafo</code>. Este método recibe tres
+argumentos adicionales: un entero <code>indice</code> y dos listas <code>visitados</code> y
+<code>orden</code>. Este método debe realizar las siguientes operaciones:</p>
+<p>a. Cambiar el valor de <code>visitados</code> en el indice <code>indice</code> por <code>True</code>.</p>
+<p>b. Obtener el nodo con indice <code>indice</code> dentro de la lista de nodos del
+grafo.</p>
+<p>c. Para cada indice <code>vecino</code> de los vecinos del nodo encontrado en la parte
+(b) revisar si la lista <code>visitados</code> tiene en la posición <code>vecino</code> el valor
+<code>False</code>. Si es así, llamar el método <code>visitar</code> usando como argumentos
+<code>vecino</code>, <code>visitados</code> y <code>orden</code>.</p>
+<p>d. Insertar el nodo encontrado en la parte (b) a la lista <code>orden</code> en la
+posición 0.</p>
+</li>
+<li>
+<p>Agregue un método <code>orden_topologico</code> a la clase <code>Grafo</code>. Este método no
+tiene argumentos adicionales y debe:</p>
+<p>a. Crear una lista <code>visitados</code> la cual tiene <code>n</code> elementos, todos iguales a
+<code>False</code>.</p>
+<p>b. Crear una lista <code>orden</code> vacía.</p>
+<p>c. Para cada entero <code>i</code> desde <code>0</code> hasta <code>n</code>. Si <code>visitados</code> en la posición
+<code>i</code> es <code>False</code>, llamar el método <code>visitar</code> con argumentos <code>i</code>, <code>visitados</code> y
+<code>orden</code>.</p>
+<p>d. Retornar <code>orden</code>.</p>
+<p>Donde <code>n</code> es el número de nodos en el grafo.</p>
+</li>
+</ol>
+<p>Si todos los métodos y funciones que se le han pedido en esta sección son
+correctos, el método <code>orden_topologico</code> debe retornar una lista con los nodos
+del grafo en orden topológico.</p>
+<h1 id="problemas">Problemas</h1>
+<p>Haciendo uso de la clase <code>Grafo</code>:</p>
+<ol start="6">
+<li>
+<p>Encuentre un orden de ejecución para las tareas en la siguiente lista de
+restricciones:</p>
+<ul>
+<li>Para ir al parque debo alistar a mi perro.</li>
+<li>Para alistar a mi perro debo haber terminado mi tarea y haberme vestido.</li>
+<li>Para haberme vestido debo haberme bañado.</li>
+<li>Para hacer mi tarea debo haber organizado el escritorio.</li>
+</ul>
+</li>
+<li>
+<p>Resuelva el problema 2 del taller 4.</p>
+</li>
+</ol>
+
+      
+    </div>
+    
+  </div>
+</section>
+
+    <script src="/js/copycode.js"></script>
+
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p></p>
+    
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/ribice/kiss">Kiss</a>.</p>
+    
+  </div>
+</section>
+
+
+
+</body>
+</html>
+
