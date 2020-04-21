@@ -32,7 +32,8 @@ Semana  | Tema                                       | Lecturas                 
 11      | Teoría de grafos                           | `[py4e]` cap. 6                             | [Taller 4](../hw/taller04/) |
 12      | _Semana Santa_                             |                                             |                             |
 13      | Repaso                                     |                                             |                             |
-13      | __Segundo examen__                         |                                             |                             |
+13      | __Segundo examen__                         |                                             | [Examen 2](../hw/examen02/) |
+14      | Algoritmos voraces                         | `[grok]` cap. 8                             |                             |
 
 [1]: ../slides/primeros_pasos.pdf
 [2]: ../slides/diagramas_de_flujo.pdf
