@@ -30,10 +30,13 @@ Semana  | Tema                                       | Lecturas                 
 9       | _Suspensión de clases_                     |                                             |                             |
 10      | Programación orientada por objetos         | `[py4e]` cap. 14, `[tlcs]` cap. 15          | [Taller 3](../hw/taller03/) |
 11      | Teoría de grafos                           | `[py4e]` cap. 6                             | [Taller 4](../hw/taller04/) |
-12      | _Semana Santa_                             |                                             |                             |
-13      | Repaso                                     |                                             |                             |
-13      | __Segundo examen__                         |                                             | [Examen 2](../hw/examen02/) |
-14      | Algoritmos voraces                         | `[grok]` cap. 8                             |                             |
+__      | _Semana Santa_                             |                                             |                             |
+12      | Repaso                                     |                                             |                             |
+12      | __Segundo examen__                         |                                             | [Examen 2](../hw/examen02/) |
+13      | Algoritmos voraces                         | `[grok]` cap. 8                             |                             |
+14      | Problema del vendedor puerta a puerta      | `[grok]` cap. 8                             |                             |
+14      | Teoría de conjuntos                        | `[grok]` cap. 8                             |                             |
+15      | Problema de la cobertura                   | `[grok]` cap. 8 [conjuntos en python][set]  |                             |
 
 [1]: ../slides/primeros_pasos.pdf
 [2]: ../slides/diagramas_de_flujo.pdf
@@ -42,6 +45,8 @@ Semana  | Tema                                       | Lecturas                 
 [5]: ../notes/funciones
 [6]: ../notes/recursion
 [dwt]: https://opentechschool.github.io/python-beginners/en/simple_drawing.html
+[set]: https://docs.python.org/3/tutorial/datastructures.html#sets
+
 # Calificaciones
 
 Se realizarán tres exámenes con los siguientes porcentajes:
