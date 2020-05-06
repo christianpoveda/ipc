@@ -6,10 +6,19 @@
     <description>Recent content in Hws on Introducción al pensamiento computacional</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <lastBuildDate>Tue, 14 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://christianpoveda.github.io/ipc/hw/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Taller 5</title>
+      <link>https://christianpoveda.github.io/ipc/hw/taller05/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://christianpoveda.github.io/ipc/hw/taller05/</guid>
+      <description>Algoritmos voraces</description>
+    </item>
     
     <item>
       <title>Examen 2</title>

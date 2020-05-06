@@ -37,6 +37,7 @@ __      | _Semana Santa_                             |                          
 14      | Problema del vendedor puerta a puerta      | `[grok]` cap. 8                             |                             |
 14      | Teoría de conjuntos                        | `[grok]` cap. 8                             |                             |
 15      | Problema de la cobertura                   | `[grok]` cap. 8 [conjuntos en python][set]  |                             |
+15      | Programación dinámica                      | `[grok]` cap. 9                             | [Taller 5](../hw/taller05/) |
 
 [1]: ../slides/primeros_pasos.pdf
 [2]: ../slides/diagramas_de_flujo.pdf
