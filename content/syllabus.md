@@ -39,6 +39,7 @@ __      | _Semana Santa_                             |                          
 15      | Problema de la cobertura                   | `[grok]` cap. 8 [conjuntos en python][set]  |                             |
 15      | Programación dinámica                      | `[grok]` cap. 9                             | [Taller 5](../hw/taller05/) |
 16      | Problemas de clasificación                 | `[grok]` cap. 10                            |                             |
+16      | Problemas de regresión                     | `[grok]` cap. 10                            | [Taller 6](../hw/taller06/) |
 
 [1]: ../slides/primeros_pasos.pdf
 [2]: ../slides/diagramas_de_flujo.pdf

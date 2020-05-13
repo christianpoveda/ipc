@@ -10,7 +10,7 @@ weight: 20
 # Instrucciones
 - Este taller puede ser realizado de forma individual o de a parejas.
 - Debe ser entregado al correo electrónico
-  [christian.poveda+ipc_taller04@correo.usa.edu.co](mailto:christian.poveda+ipc_taller02@correo.usa.edu.co)
+  [christian.poveda+ipc_taller04@correo.usa.edu.co](mailto:christian.poveda+ipc_taller04@correo.usa.edu.co)
   a mas tardar el 2020-04-15 al comienzo de la clase, de acuerdo a lo
   establecido en el syllabus respecto al método de entrega.
 
