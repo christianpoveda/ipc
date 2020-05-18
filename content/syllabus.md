@@ -40,6 +40,8 @@ __      | _Semana Santa_                             |                          
 15      | Programación dinámica                      | `[grok]` cap. 9                             | [Taller 5](../hw/taller05/) |
 16      | Problemas de clasificación                 | `[grok]` cap. 10                            |                             |
 16      | Problemas de regresión                     | `[grok]` cap. 10                            | [Taller 6](../hw/taller06/) |
+17      | Conformación de grupos (proyecto final)    |                                             | [Proyecto final](../proyecto_final) |
+17      | Discusión de propuestas (proyecto final)   |                                             |                             |
 
 [1]: ../slides/primeros_pasos.pdf
 [2]: ../slides/diagramas_de_flujo.pdf
