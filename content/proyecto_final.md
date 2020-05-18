@@ -19,7 +19,7 @@ técnica que escogió.
 - No es posible repetir las aplicaciones ya vistas en clase.
 ## Proceso y cronograma
 
-### Conformación de grupos (19 de mayo)
+### Conformación de grupos (18 de mayo)
 
 Durante clase se deben conformar los grupos de trabajo y determinar una
 propuesta tentativa. Al final de la clase se debe llenar [éste
@@ -27,13 +27,13 @@ formulario](https://forms.gle/BhifK5be2f3quoTa9) con los integrantes del grupo
 y una breve descripción de su propuesta. El problema escogido puede cambiar más
 adelante si usted lo desea.
 
-### Discusión de propuestas (21 de mayo)
+### Discusión de propuestas (20 de mayo)
 
 Durante clase el profesor discutirá con cada grupo una versión más consolidada
 de su propuesta, a pesar de que la propuesta no será aprobada durante esta
 sesión, se recomienda haber estudiado mas a profundidad el problema a resolver.
 
-### Entrega de propuestas (26 de mayo)
+### Entrega de propuestas (25 de mayo)
 
 Entregar antes de las 11:59:59 de la noche un documento con la propuesta del
 proyecto en formato `pdf` a la dirección
@@ -44,7 +44,7 @@ Este documento debe contener:
 - Una breve descripción de la solución al problema. Debe mencionar la técnica
   vista en clase en la que se basa la solución.
 
-### Aprobación de propuestas (27 de mayo)
+### Aprobación de propuestas (26 de mayo)
 
 La propuesta es aprobada por el profesor en el transcurso del día. Una vez el
 grupo reciba el correo de aprobación, puede comenzar a trabajar en la
@@ -52,7 +52,7 @@ exposición final. Si la propuesta es rechazada, debe hacer una segunda entrega
 a mas tardar el 28 de mayo a las 11:59:59 de la noche teniendo en cuenta la
 retroalimentación dada por el profesor.
 
-### Exposición final (2-5 de junio)
+### Exposición final (1-5 de junio)
 
 Preparar una presentación de 20 minutos por videoconferencia la cual incluya:
 
