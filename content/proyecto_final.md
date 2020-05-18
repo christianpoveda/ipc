@@ -17,6 +17,13 @@ técnica que escogió.
 
 - Este proyecto debe ser realizado en parejas de forma obligatoria.
 - No es posible repetir las aplicaciones ya vistas en clase.
+- El problema debe ser resuelto con alguna de las siguientes herramientas
+  vistas en clase:
+    - Teoría de grafos.
+    - Algoritmos voraces.
+    - Programación dinámica.
+    - Problemas de clasificación o regresión.
+
 ## Proceso y cronograma
 
 ### Conformación de grupos (18 de mayo)
